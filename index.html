@@ -880,638 +880,25 @@
             opacity: 0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-    </style>
-
-    <script>
-        // Personal Information Configuration
-        const profile = {
-            basics: {
-                name: "Kyrie Zhang",
-                titles: [
-                    "Computer Science Student",
-                    "Founder of Sette Studio",
-                    "Founder of 奶爸工业",
-                    "Photography enthusiast"
-                ],
-                email: "kyriezhang02@outlook.com",
-                phone: "+1 (781) 8736060",
-                location: "Boston, MA",
-                birthday: "2008-06-05",
-                avatar: "https://placekitten.com/200/200",
-                bio: "",
-                about: {
-                    intro: "你好！我是Kyrie Zhang。",
-                    interests: [
-                        { name: "人工智能与机器学习", weight: 5 },
-                        { name: "Web全栈开发", weight: 4 },
-                        { name: "开源项目贡献", weight: 3 },
-                        { name: "创新技术应用", weight: 4 },
-                        { name: "test 1", weight: 2 },
-                        { name: "test 2", weight: 2 },
-                        { name: "test 3", weight: 2 },
-                        { name: "test 4", weight: 2 },
-                        { name: "test 5", weight: 2 },
-                        { name: "test 6", weight: 2 },
-                        { name: "test 7", weight: 2 },
-                        { name: "test 8", weight: 2 }
-                    ],
-                    skills: [
-                        {
-                            category: "Programming Languages",
-                            items: ["Python", "JavaScript", "C++"]
-                        },
-                        {
-                            category: "NFT and Blockchain",
-                            items: ["Solidity", "Ethereum", "Polygon", "Binance Smart Chain"]
-                        },
-                        {
-                            category: "AI/ML",
-                            items: ["PyTorch", "TensorFlow", "Scikit-learn", "Computer Vision"]
-                        },
-                        {
-                            category: "工具与平台",
-                            items: ["Git", "Docker", "AWS", "Linux"]
-                        }
-                    ]
-                }
-            },
-            social: {
-                github: "https://github.com/johndoe",
-                linkedin: "https://linkedin.com/in/johndoe",
-                twitter: "https://twitter.com/johndoe"
-            },
-            education: [
-                {
-                    school: "Malden Catholic High School",
-                    degree:"Freshman-Sophomore",
-                    startDate: "2024-01",
-                    endDate: "2025-06",
-                    description: "主修人工智能和机器学习方向，GPA: 3.8/4.0。获得院长嘉许名单两次，参与AI研究实验室项目。"
-                },
-                {
-                    school: "Wilbraham and Monson Academy",
-                    degree:"junior-senior",
-                    startDate: "2025-09",
-                    endDate: "2027-06",
-                    description: ""
-                }
-            ],
-            summerPrograms: [
-                {
-                    name: "Columbia University Blockchain Pre-College Program",
-                    organization: "Columbia University",
-                    period: "预计2025年夏季",
-                    description: "将参加哥伦比亚大学区块链预科项目，深入学习区块链技术和应用。",
-                    date: "2025-07"
-                },
-                {
-                    name: "WPI Robotics Summer Program",
-                    organization: "Worcester Polytechnic Institute",
-                    period: "2024年夏季",
-                    description: "参加WPI机器人暑期项目，学习先进的机器人技术和实践应用。",
-                    date: "2024-07"
-                }
-            ],
-            projects: [
-                {
-                    name: "AI Art Generator",
-                    description: "基于 Stable Diffusion 的 AI 艺术创作平台",
-                    image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                    photos: [
-                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                    ],
-                    tags: ["AI", "Art", "Web Development"],
-                    period: "2025年3月",
-                    role: "主要开发者",
-                    date: "2025-03",
-                    post: `
-# AI Art Generator
-
-## 项目概述
-这是一个基于 Stable Diffusion 的 AI 艺术创作平台，让用户可以通过文字描述生成独特的艺术作品。
-
-## 技术栈
-- Frontend: React.js, Three.js
-- Backend: Python, FastAPI
-- AI: Stable Diffusion, PyTorch
-- Infrastructure: Docker, AWS
-
-## 核心功能
-1. 文本到图像生成
-2. 图像风格转换
-3. 实时预览
-4. 作品分享社区
-
-## 创新特点
-- 独特的3D展示界面
-- 实时风格预览
-- 社区互动系统
-
-## 项目展示
-![项目截图1](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-![项目截图2](https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-![项目截图3](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-`
-                },
-                {
-                    name: "Sun and Ocean",
-                    description: "基于区块链的AI生成艺术NFT项目",
-                    image: "images/SunAndOcean.jpg",
-                    photos: [
-                        "images/projects/sun-and-ocean.jpg",
-                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                    ],
-                    tags: ["Blockchain", "NFT", "AI Art"],
-                    period: "2025年2月",
-                    role: "项目负责人",
-                    date: "2025-02",
-                    post: `
-# Sun and Ocean NFT项目
-
-## 项目概述
-Sun and Ocean是一个创新的NFT项目，将AI生成艺术与区块链技术相结合，创造独特的数字艺术品。
-
-## 技术特点
-- AI艺术生成
-- 智能合约开发
-- NFT铸造与交易
-- 社区治理机制
-
-## 创新点
-1. AI艺术创作
-   - 独特的艺术风格
-   - 动态生成算法
-   - 个性化定制
-
-2. 区块链集成
-   - 去中心化存储
-   - 智能合约自动化
-   - 透明交易记录
-
-3. 社区建设
-   - 艺术家合作
-   - 收藏者互动
-   - 社区治理
-
-## 项目成果
-- 成功发行1000个独特NFT
-- 建立活跃的社区生态
-- 实现艺术价值与技术创新
-
-## 项目展示
-![NFT作品1](images/projects/sun-and-ocean.jpg)
-![NFT作品2](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-![NFT作品3](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-`
-                },
-                {
-                    name: "Virtual Museum",
-                    description: "基于 WebGL 的虚拟博物馆展示平台",
-                    image: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                    photos: [
-                        "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                    ],
-                    tags: ["WebGL", "3D", "Art"],
-                    period: "2024年12月",
-                    role: "技术负责人",
-                    date: "2024-12",
-                    post: `
-# Virtual Museum
-
-## 项目概述
-虚拟博物馆是一个让用户可以在线参观艺术展览的3D平台。
-
-## 技术特点
-- 3D场景渲染
-- 虚拟漫游
-- 作品互动
-- 实时光影效果
-
-## 创新点
-1. 沉浸式体验
-2. 智能导览
-3. 社交互动
-
-## 项目展示
-![虚拟展厅1](https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-![虚拟展厅2](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-![虚拟展厅3](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
-`
-                }
-            ],
-            competitions: [
-                {
-                    name: "VEX World Championship",
-                    achievement: "",
-                    period: "2025年",
-                    description: "",
-                    date: "2025-05",
-                    post: `
-# VEX World Championship 2025
-
-## 比赛概述
-VEX机器人世界锦标赛是全球最大的机器人竞赛，汇集了来自世界各地的顶尖选手。
-
-## 参赛准备
-- 团队组建与分工
-- 机器人设计与优化
-- 编程策略制定
-- 实战训练与调试
-
-## 技术亮点
-1. 创新的机械结构设计
-2. 高效的自动控制算法
-3. 精准的传感器应用
-4. 稳定的比赛表现
-
-## 比赛收获
-- 团队协作能力提升
-- 技术水平的突破
-- 国际视野的开拓
-- 宝贵的比赛经验
-`
-                },
-                {
-                    name: "VEX V5 Robotics US Open",
-                    achievement: "全国冠军",
-                    period: "2025年",
-                    description: "在VEX V5机器人美国公开赛中获得全国冠军。",
-                    date: "2025-03-29",
-                    post: `
-# VEX V5 Robotics US Open 全国冠军之路
-
-## 比赛历程
-我们的团队经过多轮激烈角逐，最终在决赛中脱颖而出，获得了全国冠军的荣誉。
-
-## 技术创新
-1. 自主研发的机器人控制系统
-2. 优化的机械结构设计
-3. 创新的比赛策略
-
-## 关键突破
-- 自动程序的精确控制
-- 机械结构的可靠性提升
-- 团队配合的默契度提高
-
-## 获奖感言
-这次比赛的成功离不开团队每一个成员的努力和付出，我们将继续在机器人领域探索更多可能。
-`
-                },
-                {
-                    name: "Columbia University MEC First Round",
-                    achievement: "中国区决赛入围 & Team Leader",
-                    period: "2025年",
-                    description: "作为团队领袖带领团队进入哥伦比亚大学MEC创业竞赛中国区决赛。",
-                    date: "2025-03-17"
-                },
-                {
-                    name: "Diamond Challenge China",
-                    achievement: "南京赛区前十名 & Team Leader",
-                    period: "2024-09-24至2025-03-02",
-                    description: "担任团队领袖，在Diamond Challenge中国南京赛区获得前十名。",
-                    date: "2025-03-02"
-                },
-                {
-                    name: "VEX V5 Robotics State Championship",
-                    achievement: "马萨诸塞州冠军",
-                    period: "2025年2月22至23日",
-                    description: "在VEX V5机器人马萨诸塞州锦标赛中获得州冠军。",
-                    date: "2025-02-22"
-                },
-                {
-                    name: "AMC10 & AIME",
-                    achievement: "AMC10全球前5% & AIME资格获得者",
-                    period: "2024年年初至2024年12月",
-                    description: "在AMC10数学竞赛中获得全球前5%的成绩，并获得AIME竞赛资格。",
-                    date: "2024-12-14"
-                },
-                {
-                    name: "USACO",
-                    achievement: "银级别资格",
-                    period: "2024年1月",
-                    description: "在美国计算机奥林匹克竞赛中获得银级别资格。",
-                    date: "2024-01"
-                },
-                {
-                    name: "CSP_J",
-                    achievement: "National First Prize",
-                    period: "2026年春季",
-                    description: "计划参加2026年春季AI奥林匹克竞赛。",
-                    date: "2022-10"
-                }
-            ],
-            activities: [
-                {
-                    name: "Sette Studio",
-                    organization: "创始人",
-                    period: "2025年4月至今",
-                    description: "AI art, branding, and digital content studio，专注于AI艺术创作、品牌设计和数字内容制作。",
-                    date: "2025-04",
-                    post: `
-# Sette Studio 创业历程
-
-## 项目背景
-Sette Studio 是一个专注于AI艺术创作和品牌设计的创新工作室，致力于将人工智能与艺术创作完美结合。
-
-## 核心业务
-1. AI艺术创作
-   - 风格化艺术生成
-   - 个性化设计定制
-   - 艺术作品优化
-
-2. 品牌设计服务
-   - 品牌识别系统
-   - 视觉设计方案
-   - 营销物料制作
-
-3. 数字内容制作
-   - 社交媒体内容
-   - 数字艺术展示
-   - 互动体验设计
-
-## 技术创新
-- 自研AI艺术生成模型
-- 智能设计辅助系统
-- 跨平台内容分发
-
-## 未来展望
-我们将继续探索AI艺术的无限可能，为客户提供更优质的创意服务。
-`
-                },
-                {
-                    name: "ISTEAM Volunteering",
-                    organization: "志愿者",
-                    period: "2024年9月至今",
-                    description: "每周投入约2小时，参与活动组织和STEM教育，致力于推广科技教育。",
-                    date: "2024-09-28"
-                },
-                {
-                    name: "AI To-Do List App Development",
-                    organization: "个人项目",
-                    period: "2024年底至今",
-                    description: "开发基于AI的待办事项应用，目前处于开发阶段。",
-                    date: "2024-10"
-                },
-                {
-                    name: "FRAME！Photography Contest",
-                    organization: "builder",
-                    period: "2025年4月至今",
-                    description: "持续进行个人摄影项目创作。",
-                    date: "2025-04"
-                },
-                {
-                    name: "Netease Cloud Music Creator",
-                    organization: "内容创作者",
-                    period: "持续进行",
-                    description: "专注于黑胶音乐内容创作，累计获得超过30万次播放。",
-                    date: "2025-03-03"
-                }
-            ]
-        };
-    </script>
-</head>
-<body class="min-h-screen bg-[#0a0a0a]">
-    <div class="min-h-screen flex items-stretch p-6">
-        <div class="flex-1 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <!-- Left: Personal Information -->
-            <div class="md:col-span-1">
-                <div class="bg-[#1c1c1c] h-full p-8 rounded-xl">
-                    <div class="flex-1 flex flex-col items-center">
-                        <img id="avatar" src="" alt="" class="w-32 h-32 rounded-full mb-6 object-cover border-2 border-gray-700">
-                        <h1 id="name" class="text-2xl font-bold text-white"></h1>
-                        <h2 id="title" class="text-xl font-bold text-gray-300 mb-4"></h2>
-                        <p id="bio" class="text-gray-400 text-center mb-8"></p>
-
-                        <div class="w-full space-y-4">
-                            <div class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                <span id="email"></span>
-                            </div>
-                            <div class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                                <span id="phone"></span>
-                            </div>
-                            <div class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                                <span id="location"></span>
-                            </div>
-                            <div class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                <span id="birthday"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="social-links" class="flex justify-center space-x-6 mt-8 pt-8 border-t border-gray-700">
-                        <!-- Social links will be added dynamically -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right: Education & Projects -->
-            <div class="md:col-span-3">
-                <div class="bg-[#1c1c1c] h-[calc(100vh-3rem)] p-8 rounded-xl flex flex-col">
-                    <!-- Navigation Bar -->
-                    <nav class="flex space-x-1 mb-8 bg-[#0a0a0a] p-1 rounded-lg">
-                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors bg-[#262626] text-white" data-tab="about">About Me</button>
-                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="timeline">Timeline</button>
-                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="project">Project</button>
-                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="competition">Competition</button>
-                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="activity">Activity</button>
-                    </nav>
-
-                    <div class="flex-1 overflow-y-auto pr-4">
-                        <!-- About Me Section -->
-                        <section id="about-section" class="tab-content">
-                            <h2 class="text-2xl font-bold text-white mb-8">About Me</h2>
-                            <div class="space-y-8">
-                                <!-- Introduction -->
-                                <div>
-                                    <!-- 这里是"关于我"的介绍文本，内容将通过JavaScript动态添加到id为"about-intro"的元素中 -->
-                                    <!-- 文案内容在JavaScript文件中修改，通常在main.js或者类似的文件中查找about-intro相关的代码 -->
-                                    <!-- 这个元素是空的是因为内容会通过JavaScript动态加载，这样便于后期维护和更新个人介绍而无需修改HTML -->
-                                    <p class="text-gray-300 text-lg leading-relaxed" id="about-intro"></p>
-                                </div>
-
-                                <!-- Skills -->
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white mb-4">技能专长</h3>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="skills-list">
-                                        <!-- Skills will be added dynamically -->
-                                    </div>
-                                </div>
-
-                                <!-- Interests -->
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white mb-4">兴趣方向</h3>
-                                    <div class="relative h-96 flex items-center justify-center perspective-1000" id="interests-list">
-                                        <div class="relative w-64 h-64 transform-style-3d" id="sphere-container">
-                                            <!-- Interests will be added dynamically -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Timeline Section -->
-                        <section id="timeline-section" class="tab-content hidden">
-                            <h2 class="text-2xl font-bold text-white mb-8">时间线</h2>
-                            <div class="space-y-12" id="timeline-list">
-                                <!-- Timeline items will be added dynamically -->
-                            </div>
-                        </section>
-
-                        <!-- Project Section -->
-                        <section id="project-section" class="tab-content hidden">
-                            <h2 class="text-2xl font-bold text-white mb-8">项目展示</h2>
-                            <div class="gallery-container">
-                                <!-- Project items will be added here -->
-                            </div>
-                        </section>
-
-                        <!-- Competition Section -->
-                        <section id="competition-section" class="tab-content hidden">
-                            <h2 class="text-2xl font-bold text-white mb-8">竞赛经历</h2>
-                            <div class="space-y-6" id="competition-cards">
-                                <!-- Competition cards will be added here -->
-                            </div>
-                        </section>
-
-                        <!-- Activity Section -->
-                        <section id="activity-section" class="tab-content hidden">
-                            <h2 class="text-2xl font-bold text-white mb-8">活动经历</h2>
-                            <div class="space-y-6" id="activity-cards">
-                                <!-- Activity cards will be added here -->
-                            </div>
-                        </section>
-
-                        <!-- Detail View Section -->
-                        <section id="detail-section" class="tab-content hidden">
-                            <div class="flex items-center mb-8">
-                                <button id="back-button" class="flex items-center text-gray-400 hover:text-white transition-colors">
-                                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-                                    </svg>
-                                    返回
-                                </button>
-                                <h2 class="text-2xl font-bold text-white ml-4" id="detail-title"></h2>
-                            </div>
-                            <div class="bg-[#262626] rounded-xl p-8">
-                                <div class="mb-6">
-                                    <div class="text-gray-400 mb-2" id="detail-meta"></div>
-                                    <div class="text-gray-300 text-lg" id="detail-description"></div>
-                                </div>
-                                <div id="detail-content" class="prose prose-invert max-w-none">
-                                    <!-- 详细内容将在这里动态添加 -->
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        .tab-content {
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-        
-        .tab-content.hidden {
-            display: none;
-            opacity: 0;
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #262626;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #333333;
-        }
-
-        /* Cursor Blink Animation */
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .cursor-blink {
-            animation: blink 1s infinite;
-            color: #f97316; /* 使用与引号相同的橙色 */
-            font-weight: bold;
-        }
-
-        /* 3D Sphere Styles */
-        .perspective-1000 {
-            perspective: 1000px;
-        }
-
-        .transform-style-3d {
-            transform-style: preserve-3d;
-        }
 
         /* Interest Tags Styles */
         .interest-tag {
-            position: absolute;
+            position: relative;
             transition: transform 0.3s ease;
             background: rgba(31, 41, 55, 0.8);
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(75, 85, 99, 0.5);
-            animation: moveInArea var(--duration) linear infinite;
-            animation-delay: var(--delay);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.25rem;
         }
 
         .interest-tag:hover {
-            transform: scale(1.2);
+            transform: translateY(-3px);
             z-index: 10;
-            background: rgba(31, 41, 55, 0.9);
-            border-color: rgba(75, 85, 99, 0.8);
-            animation-play-state: paused;
-        }
-
-        @keyframes moveInArea {
-            0% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(var(--moveX), var(--moveY));
-            }
-            50% {
-                transform: translate(calc(var(--moveX) * -1), var(--moveY));
-            }
-            75% {
-                transform: translate(calc(var(--moveX) * -1), calc(var(--moveY) * -1));
-            }
-            100% {
-                transform: translate(0, 0);
-            }
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* 宝石样式 */
@@ -2075,6 +1462,1222 @@ Sette Studio 是一个专注于AI艺术创作和品牌设计的创新工作室�
             opacity: 0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        /* Interest Tags Styles */
+        .interest-tag {
+            position: relative;
+            transition: transform 0.3s ease;
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+
+        .interest-tag:hover {
+            transform: translateY(-3px);
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <script>
+        // Personal Information Configuration
+        const profile = {
+            basics: {
+                name: "Kyrie Zhang",
+                titles: [
+                    "Computer Science Student",
+                    "Founder of Sette Studio",
+                    "Founder of 奶爸工业",
+                    "Photography enthusiast"
+                ],
+                email: "kyriezhang02@outlook.com",
+                phone: "+1 (781) 8736060",
+                location: "Boston, MA",
+                birthday: "2008-06-05",
+                avatar: "https://placekitten.com/200/200",
+                bio: "",
+                about: {
+                    intro: "你好！我是Kyrie Zhang。",
+                    interests: [
+                        { name: "人工智能与机器学习", weight: 5 },
+                        { name: "Web全栈开发", weight: 4 },
+                        { name: "开源项目贡献", weight: 3 },
+                        { name: "创新技术应用", weight: 4 },
+                        { name: "test 1", weight: 2 },
+                        { name: "test 2", weight: 2 },
+                        { name: "test 3", weight: 2 },
+                        { name: "test 4", weight: 2 },
+                        { name: "test 5", weight: 2 },
+                        { name: "test 6", weight: 2 },
+                        { name: "test 7", weight: 2 },
+                        { name: "test 8", weight: 2 }
+                    ],
+                    skills: [
+                        {
+                            category: "Programming Languages",
+                            items: ["Python", "JavaScript", "C++"]
+                        },
+                        {
+                            category: "NFT and Blockchain",
+                            items: ["Solidity", "Ethereum", "Polygon", "Binance Smart Chain"]
+                        },
+                        {
+                            category: "AI/ML",
+                            items: ["PyTorch", "TensorFlow", "Scikit-learn", "Computer Vision"]
+                        },
+                        {
+                            category: "工具与平台",
+                            items: ["Git", "Docker", "AWS", "Linux"]
+                        }
+                    ]
+                }
+            },
+            social: {
+                github: "https://github.com/johndoe",
+                linkedin: "https://linkedin.com/in/johndoe",
+                twitter: "https://twitter.com/johndoe"
+            },
+            education: [
+                {
+                    school: "Malden Catholic High School",
+                    degree:"Freshman-Sophomore",
+                    startDate: "2024-01",
+                    endDate: "2025-06",
+                    description: "主修人工智能和机器学习方向，GPA: 3.8/4.0。获得院长嘉许名单两次，参与AI研究实验室项目。"
+                },
+                {
+                    school: "Wilbraham and Monson Academy",
+                    degree:"junior-senior",
+                    startDate: "2025-09",
+                    endDate: "2027-06",
+                    description: ""
+                }
+            ],
+            summerPrograms: [
+                {
+                    name: "Columbia University Blockchain Pre-College Program",
+                    organization: "Columbia University",
+                    period: "预计2025年夏季",
+                    description: "将参加哥伦比亚大学区块链预科项目，深入学习区块链技术和应用。",
+                    date: "2025-07"
+                },
+                {
+                    name: "WPI Robotics Summer Program",
+                    organization: "Worcester Polytechnic Institute",
+                    period: "2024年夏季",
+                    description: "参加WPI机器人暑期项目，学习先进的机器人技术和实践应用。",
+                    date: "2024-07"
+                }
+            ],
+            projects: [
+                {
+                    name: "AI Art Generator",
+                    description: "基于 Stable Diffusion 的 AI 艺术创作平台",
+                    image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                    photos: [
+                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    ],
+                    tags: ["AI", "Art", "Web Development"],
+                    period: "2025年3月",
+                    role: "主要开发者",
+                    date: "2025-03",
+                    post: `
+# AI Art Generator
+
+## 项目概述
+这是一个基于 Stable Diffusion 的 AI 艺术创作平台，让用户可以通过文字描述生成独特的艺术作品。
+
+## 技术栈
+- Frontend: React.js, Three.js
+- Backend: Python, FastAPI
+- AI: Stable Diffusion, PyTorch
+- Infrastructure: Docker, AWS
+
+## 核心功能
+1. 文本到图像生成
+2. 图像风格转换
+3. 实时预览
+4. 作品分享社区
+
+## 创新特点
+- 独特的3D展示界面
+- 实时风格预览
+- 社区互动系统
+
+## 项目展示
+![项目截图1](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+![项目截图2](https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+![项目截图3](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+`
+                },
+                {
+                    name: "Sun and Ocean",
+                    description: "基于区块链的AI生成艺术NFT项目",
+                    image: "images/SunAndOcean.jpg",
+                    photos: [
+                        "images/projects/sun-and-ocean.jpg",
+                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    ],
+                    tags: ["Blockchain", "NFT", "AI Art"],
+                    period: "2025年2月",
+                    role: "项目负责人",
+                    date: "2025-02",
+                    post: `
+# Sun and Ocean NFT项目
+
+## 项目概述
+Sun and Ocean是一个创新的NFT项目，将AI生成艺术与区块链技术相结合，创造独特的数字艺术品。
+
+## 技术特点
+- AI艺术生成
+- 智能合约开发
+- NFT铸造与交易
+- 社区治理机制
+
+## 创新点
+1. AI艺术创作
+   - 独特的艺术风格
+   - 动态生成算法
+   - 个性化定制
+
+2. 区块链集成
+   - 去中心化存储
+   - 智能合约自动化
+   - 透明交易记录
+
+3. 社区建设
+   - 艺术家合作
+   - 收藏者互动
+   - 社区治理
+
+## 项目成果
+- 成功发行1000个独特NFT
+- 建立活跃的社区生态
+- 实现艺术价值与技术创新
+
+## 项目展示
+![NFT作品1](images/projects/sun-and-ocean.jpg)
+![NFT作品2](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+![NFT作品3](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+`
+                },
+                {
+                    name: "Virtual Museum",
+                    description: "基于 WebGL 的虚拟博物馆展示平台",
+                    image: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                    photos: [
+                        "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    ],
+                    tags: ["WebGL", "3D", "Art"],
+                    period: "2024年12月",
+                    role: "技术负责人",
+                    date: "2024-12",
+                    post: `
+# Virtual Museum
+
+## 项目概述
+虚拟博物馆是一个让用户可以在线参观艺术展览的3D平台。
+
+## 技术特点
+- 3D场景渲染
+- 虚拟漫游
+- 作品互动
+- 实时光影效果
+
+## 创新点
+1. 沉浸式体验
+2. 智能导览
+3. 社交互动
+
+## 项目展示
+![虚拟展厅1](https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+![虚拟展厅2](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+![虚拟展厅3](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+`
+                }
+            ],
+            competitions: [
+                {
+                    name: "VEX World Championship",
+                    achievement: "",
+                    period: "2025年",
+                    description: "",
+                    date: "2025-05",
+                    post: `
+# VEX World Championship 2025
+
+## 比赛概述
+VEX机器人世界锦标赛是全球最大的机器人竞赛，汇集了来自世界各地的顶尖选手。
+
+## 参赛准备
+- 团队组建与分工
+- 机器人设计与优化
+- 编程策略制定
+- 实战训练与调试
+
+## 技术亮点
+1. 创新的机械结构设计
+2. 高效的自动控制算法
+3. 精准的传感器应用
+4. 稳定的比赛表现
+
+## 比赛收获
+- 团队协作能力提升
+- 技术水平的突破
+- 国际视野的开拓
+- 宝贵的比赛经验
+`
+                },
+                {
+                    name: "VEX V5 Robotics US Open",
+                    achievement: "全国冠军",
+                    period: "2025年",
+                    description: "在VEX V5机器人美国公开赛中获得全国冠军。",
+                    date: "2025-03-29",
+                    post: `
+# VEX V5 Robotics US Open 全国冠军之路
+
+## 比赛历程
+我们的团队经过多轮激烈角逐，最终在决赛中脱颖而出，获得了全国冠军的荣誉。
+
+## 技术创新
+1. 自主研发的机器人控制系统
+2. 优化的机械结构设计
+3. 创新的比赛策略
+
+## 关键突破
+- 自动程序的精确控制
+- 机械结构的可靠性提升
+- 团队配合的默契度提高
+
+## 获奖感言
+这次比赛的成功离不开团队每一个成员的努力和付出，我们将继续在机器人领域探索更多可能。
+`
+                },
+                {
+                    name: "Columbia University MEC First Round",
+                    achievement: "中国区决赛入围 & Team Leader",
+                    period: "2025年",
+                    description: "作为团队领袖带领团队进入哥伦比亚大学MEC创业竞赛中国区决赛。",
+                    date: "2025-03-17"
+                },
+                {
+                    name: "Diamond Challenge China",
+                    achievement: "南京赛区前十名 & Team Leader",
+                    period: "2024-09-24至2025-03-02",
+                    description: "担任团队领袖，在Diamond Challenge中国南京赛区获得前十名。",
+                    date: "2025-03-02"
+                },
+                {
+                    name: "VEX V5 Robotics State Championship",
+                    achievement: "马萨诸塞州冠军",
+                    period: "2025年2月22至23日",
+                    description: "在VEX V5机器人马萨诸塞州锦标赛中获得州冠军。",
+                    date: "2025-02-22"
+                },
+                {
+                    name: "AMC10 & AIME",
+                    achievement: "AMC10全球前5% & AIME资格获得者",
+                    period: "2024年年初至2024年12月",
+                    description: "在AMC10数学竞赛中获得全球前5%的成绩，并获得AIME竞赛资格。",
+                    date: "2024-12-14"
+                },
+                {
+                    name: "USACO",
+                    achievement: "银级别资格",
+                    period: "2024年1月",
+                    description: "在美国计算机奥林匹克竞赛中获得银级别资格。",
+                    date: "2024-01"
+                },
+                {
+                    name: "CSP_J",
+                    achievement: "National First Prize",
+                    period: "2026年春季",
+                    description: "计划参加2026年春季AI奥林匹克竞赛。",
+                    date: "2022-10"
+                }
+            ],
+            activities: [
+                {
+                    name: "Sette Studio",
+                    organization: "创始人",
+                    period: "2025年4月至今",
+                    description: "AI art, branding, and digital content studio，专注于AI艺术创作、品牌设计和数字内容制作。",
+                    date: "2025-04",
+                    post: `
+# Sette Studio 创业历程
+
+## 项目背景
+Sette Studio 是一个专注于AI艺术创作和品牌设计的创新工作室，致力于将人工智能与艺术创作完美结合。
+
+## 核心业务
+1. AI艺术创作
+   - 风格化艺术生成
+   - 个性化设计定制
+   - 艺术作品优化
+
+2. 品牌设计服务
+   - 品牌识别系统
+   - 视觉设计方案
+   - 营销物料制作
+
+3. 数字内容制作
+   - 社交媒体内容
+   - 数字艺术展示
+   - 互动体验设计
+
+## 技术创新
+- 自研AI艺术生成模型
+- 智能设计辅助系统
+- 跨平台内容分发
+
+## 未来展望
+我们将继续探索AI艺术的无限可能，为客户提供更优质的创意服务。
+`
+                },
+                {
+                    name: "ISTEAM Volunteering",
+                    organization: "志愿者",
+                    period: "2024年9月至今",
+                    description: "每周投入约2小时，参与活动组织和STEM教育，致力于推广科技教育。",
+                    date: "2024-09-28"
+                },
+                {
+                    name: "AI To-Do List App Development",
+                    organization: "个人项目",
+                    period: "2024年底至今",
+                    description: "开发基于AI的待办事项应用，目前处于开发阶段。",
+                    date: "2024-10"
+                },
+                {
+                    name: "FRAME！Photography Contest",
+                    organization: "builder",
+                    period: "2025年4月至今",
+                    description: "持续进行个人摄影项目创作。",
+                    date: "2025-04"
+                },
+                {
+                    name: "Netease Cloud Music Creator",
+                    organization: "内容创作者",
+                    period: "持续进行",
+                    description: "专注于黑胶音乐内容创作，累计获得超过30万次播放。",
+                    date: "2025-03-03"
+                }
+            ]
+        };
+    </script>
+</head>
+<body class="min-h-screen bg-[#0a0a0a]">
+    <div class="min-h-screen flex items-stretch p-6">
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Left: Personal Information -->
+            <div class="md:col-span-1">
+                <div class="bg-[#1c1c1c] h-full p-8 rounded-xl">
+                    <div class="flex-1 flex flex-col items-center">
+                        <img id="avatar" src="" alt="" class="w-32 h-32 rounded-full mb-6 object-cover border-2 border-gray-700">
+                        <h1 id="name" class="text-2xl font-bold text-white"></h1>
+                        <h2 id="title" class="text-xl font-bold text-gray-300 mb-4"></h2>
+                        <p id="bio" class="text-gray-400 text-center mb-8"></p>
+
+                        <div class="w-full space-y-4">
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span id="email"></span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span id="phone"></span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span id="location"></span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span id="birthday"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="social-links" class="flex justify-center space-x-6 mt-8 pt-8 border-t border-gray-700">
+                        <!-- Social links will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Education & Projects -->
+            <div class="md:col-span-3">
+                <div class="bg-[#1c1c1c] h-[calc(100vh-3rem)] p-8 rounded-xl flex flex-col">
+                    <!-- Navigation Bar -->
+                    <nav class="flex space-x-1 mb-8 bg-[#0a0a0a] p-1 rounded-lg">
+                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors bg-[#262626] text-white" data-tab="about">About Me</button>
+                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="timeline">Timeline</button>
+                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="project">Project</button>
+                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="competition">Competition</button>
+                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="activity">Activity</button>
+                    </nav>
+
+                    <div class="flex-1 overflow-y-auto pr-4">
+                        <!-- About Me Section -->
+                        <section id="about-section" class="tab-content">
+                            <h2 class="text-2xl font-bold text-white mb-8">About Me</h2>
+                            <div class="space-y-8">
+                                <!-- Introduction -->
+                                <div>
+                                    <!-- 这里是"关于我"的介绍文本，内容将通过JavaScript动态添加到id为"about-intro"的元素中 -->
+                                    <!-- 文案内容在JavaScript文件中修改，通常在main.js或者类似的文件中查找about-intro相关的代码 -->
+                                    <!-- 这个元素是空的是因为内容会通过JavaScript动态加载，这样便于后期维护和更新个人介绍而无需修改HTML -->
+                                    <p class="text-gray-300 text-lg leading-relaxed" id="about-intro"></p>
+                                </div>
+
+                                <!-- Skills -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white mb-4">技能专长</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="skills-list">
+                                        <!-- Skills will be added dynamically -->
+                                    </div>
+                                </div>
+
+                                <!-- Interests -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white mb-4">兴趣方向</h3>
+                                    <div class="relative flex flex-wrap gap-3 py-4" id="interests-list">
+                                            <!-- Interests will be added dynamically -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Timeline Section -->
+                        <section id="timeline-section" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold text-white mb-8">时间线</h2>
+                            <div class="space-y-12" id="timeline-list">
+                                <!-- Timeline items will be added dynamically -->
+                            </div>
+                        </section>
+
+                        <!-- Project Section -->
+                        <section id="project-section" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold text-white mb-8">项目展示</h2>
+                            <div class="gallery-container">
+                                <!-- Project items will be added here -->
+                            </div>
+                        </section>
+
+                        <!-- Competition Section -->
+                        <section id="competition-section" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold text-white mb-8">竞赛经历</h2>
+                            <div class="space-y-6" id="competition-cards">
+                                <!-- Competition cards will be added here -->
+                            </div>
+                        </section>
+
+                        <!-- Activity Section -->
+                        <section id="activity-section" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold text-white mb-8">活动经历</h2>
+                            <div class="space-y-6" id="activity-cards">
+                                <!-- Activity cards will be added here -->
+                            </div>
+                        </section>
+
+                        <!-- Detail View Section -->
+                        <section id="detail-section" class="tab-content hidden">
+                            <div class="flex items-center mb-8">
+                                <button id="back-button" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                                    </svg>
+                                    返回
+                                </button>
+                                <h2 class="text-2xl font-bold text-white ml-4" id="detail-title"></h2>
+                            </div>
+                            <div class="bg-[#262626] rounded-xl p-8">
+                                <div class="mb-6">
+                                    <div class="text-gray-400 mb-2" id="detail-meta"></div>
+                                    <div class="text-gray-300 text-lg" id="detail-description"></div>
+                                </div>
+                                <div id="detail-content" class="prose prose-invert max-w-none">
+                                    <!-- 详细内容将在这里动态添加 -->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .tab-content {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tab-content.hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333333;
+        }
+
+        /* Cursor Blink Animation */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .cursor-blink {
+            animation: blink 1s infinite;
+            color: #f97316; /* 使用与引号相同的橙色 */
+            font-weight: bold;
+        }
+
+        /* 3D Sphere Styles */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+
+        /* Interest Tags Styles */
+        .interest-tag {
+            position: relative;
+            transition: transform 0.3s ease;
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+
+        .interest-tag:hover {
+            transform: translateY(-3px);
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 宝石样式 */
+        .hexagon {
+            position: absolute;
+            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+            background: linear-gradient(135deg, 
+                rgba(234, 88, 12, 0.8) 0%,
+                rgba(249, 115, 22, 0.9) 25%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(249, 115, 22, 0.9) 75%,
+                rgba(234, 88, 12, 0.8) 100%
+            );
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            box-shadow: 
+                0 0 30px rgba(249, 115, 22, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+        }
+        
+        .hexagon::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: linear-gradient(135deg,
+                rgba(251, 146, 60, 0.9) 0%,
+                rgba(253, 186, 116, 0.95) 30%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(253, 186, 116, 0.95) 70%,
+                rgba(251, 146, 60, 0.9) 100%
+            );
+            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+            z-index: 1;
+            filter: brightness(1.2) contrast(1.2);
+            opacity: 0.9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hexagon::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(45deg, 
+                    transparent 0%,
+                    rgba(255, 255, 255, 0) 45%,
+                    rgba(255, 255, 255, 0.9) 50%,
+                    rgba(255, 255, 255, 0) 55%,
+                    transparent 100%
+                ),
+                linear-gradient(-45deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0) 45%,
+                    rgba(255, 255, 255, 0.6) 50%,
+                    rgba(255, 255, 255, 0) 55%,
+                    transparent 100%
+                );
+            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+            mix-blend-mode: overlay;
+            opacity: 0.8;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: shimmer 3s infinite linear;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% -200%, 200% 200%;
+            }
+            100% {
+                background-position: 200% 200%, -200% -200%;
+            }
+        }
+        
+        .hexagon:hover {
+            transform: scale(1.15) rotateY(30deg) rotateX(15deg);
+            box-shadow: 
+                0 0 50px rgba(249, 115, 22, 0.5),
+                inset 0 0 30px rgba(255, 255, 255, 0.8);
+            filter: brightness(1.2);
+        }
+        
+        .hexagon:hover::before {
+            filter: brightness(1.4) contrast(1.4);
+            opacity: 0.95;
+        }
+        
+        .hexagon:hover::after {
+            opacity: 1;
+            background-size: 200% 200%, 200% 200%;
+        }
+        
+        .hexagon-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 0 20%;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8),
+                0 2px 4px rgba(0, 0, 0, 0.4);
+            font-weight: 700;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0) rotateY(0deg) rotateX(0deg);
+            }
+            25% {
+                transform: translate(10px, -10px) rotateY(10deg) rotateX(5deg);
+            }
+            50% {
+                transform: translate(-5px, 15px) rotateY(-10deg) rotateX(-5deg);
+            }
+            75% {
+                transform: translate(-15px, -5px) rotateY(5deg) rotateX(10deg);
+            }
+            100% {
+                transform: translate(0, 0) rotateY(0deg) rotateX(0deg);
+            }
+        }
+
+        .floating {
+            animation: none;
+        }
+
+        .floating:hover {
+            animation-play-state: paused;
+        }
+
+        /* 神经网络容器样式 */
+        .neural-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(30, 30, 30, 0.95));
+            overflow: hidden;
+        }
+
+        /* 神经元节点样式 */
+        .neuron {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(20, 20, 20, 0.6);
+            border: 2px solid rgba(249, 115, 22, 0.3);
+            border-radius: 12px;
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px);
+            box-shadow: 
+                0 0 20px rgba(249, 115, 22, 0.1),
+                inset 0 0 15px rgba(249, 115, 22, 0.1);
+        }
+
+        .neuron::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            background: linear-gradient(135deg,
+                rgba(249, 115, 22, 0.1),
+                rgba(249, 115, 22, 0.05)
+            );
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .neuron::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 11px;
+            background: linear-gradient(135deg,
+                rgba(249, 115, 22, 0.5),
+                transparent 60%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .neuron:hover {
+            transform: scale(1.1) translateZ(20px);
+            border-color: rgba(249, 115, 22, 0.8);
+            background: rgba(30, 30, 30, 0.8);
+            box-shadow: 
+                0 0 30px rgba(249, 115, 22, 0.2),
+                inset 0 0 20px rgba(249, 115, 22, 0.2);
+        }
+
+        .neuron:hover::after {
+            opacity: 0.2;
+        }
+
+        .neuron-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            text-align: center;
+            padding: 10px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+        }
+
+        /* 神经元连接线样式 */
+        .neural-connection {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .neural-connection path {
+            stroke: rgba(255, 255, 255, 0.15);
+            stroke-width: 0.3;
+            fill: none;
+            stroke-dasharray: none;
+            filter: none;
+            transition: stroke 0.3s ease;
+        }
+
+        /* 当鼠标悬停在神经元上时，相连的线会变亮 */
+        .neuron:hover ~ .neural-connection path {
+            stroke: rgba(255, 255, 255, 0.3);
+        }
+
+        /* 背景粒子效果 */
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(249, 115, 22, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            animation: particleFloat 8s linear infinite;
+            filter: blur(1px);
+        }
+
+        @keyframes particleFloat {
+            0% {
+                opacity: 0;
+                transform: translate(0, 100%) scale(1);
+            }
+            20% {
+                opacity: 0.3;
+                transform: translate(10px, 60%) scale(1.2);
+            }
+            40% {
+                opacity: 0.5;
+                transform: translate(-10px, 30%) scale(1);
+            }
+            60% {
+                opacity: 0.3;
+                transform: translate(5px, 10%) scale(1.1);
+            }
+            80% {
+                opacity: 0.2;
+                transform: translate(-5px, -10%) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0, -30%) scale(0.8);
+            }
+        }
+
+        /* 时间线样式 */
+        .timeline-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: 150px 1px 1fr;
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 40px;
+        }
+
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item.hide {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .timeline-date {
+            text-align: right;
+            padding-right: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 4px;
+        }
+
+        .timeline-date .year {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 4px;
+        }
+
+        .timeline-line {
+            position: relative;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: -40px; /* 抵消最后一个项目的margin-bottom */
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content {
+            padding-left: 20px;
+        }
+
+        /* 根据不同类型设置不同的颜色 */
+        .timeline-item.education .timeline-line::before {
+            background: #3b82f6;
+        }
+
+        .timeline-item.summer .timeline-line::before {
+            background: #06b6d4;
+        }
+
+        .timeline-item.project .timeline-line::before {
+            background: #22c55e;
+        }
+
+        .timeline-item.competition .timeline-line::before {
+            background: #eab308;
+        }
+
+        .timeline-item.activity .timeline-line::before {
+            background: #a855f7;
+        }
+
+        .timeline-item:hover .timeline-line::before {
+            transform: translateX(-50%) scale(1.2);
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        /* 卡片动画效果 */
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .card {
+            background: rgba(38, 38, 38, 0.5);
+            border: 1px solid rgba(75, 85, 99, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideInFromLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(n+6) {
+            animation-delay: 0.5s;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.05),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(75, 85, 99, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:active {
+            transform: translateY(-2px) scale(0.98);
+        }
+
+        /* 修改tab切换时的动画 */
+        .tab-content:not(.hidden) .card {
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideInFromLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .competition-card {
+            border-left: 4px solid #eab308;
+        }
+
+        .activity-card {
+            border-left: 4px solid #a855f7;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-period {
+            font-size: 0.875rem;
+            color: #6b7280;
+            padding: 0.25rem 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+        }
+
+        .card-description {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* 返回按钮动画 */
+        #back-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background: rgba(38, 38, 38, 0.5);
+            backdrop-filter: blur(8px);
+            transform-origin: left center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #back-button svg {
+            transform: translateX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #back-button:hover {
+            background: rgba(38, 38, 38, 0.8);
+            transform: translateX(-4px);
+        }
+
+        #back-button:hover svg {
+            transform: translateX(-4px);
+        }
+
+        #back-button:active {
+            transform: translateX(-2px) scale(0.98);
+        }
+
+        #back-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 0.5rem;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #back-button:hover::before {
+            opacity: 1;
+        }
+
+        /* 详情页面过渡动画优化 */
+        .slide-enter {
+            transform: translateX(100%) scale(0.95);
+            opacity: 0;
+        }
+
+        .slide-enter-active {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-exit {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+
+        .slide-exit-active {
+            transform: translateX(-100%) scale(0.95);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Interest Tags Styles */
+        .interest-tag {
+            position: relative;
+            transition: transform 0.3s ease;
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+
+        .interest-tag:hover {
+            transform: translateY(-3px);
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
     <script>
@@ -2327,182 +2930,76 @@ Sette Studio 是一个专注于AI艺术创作和品牌设计的创新工作室�
         const interestsList = document.getElementById('interests-list');
         const interests = profile.basics.about.interests;
 
-        // 创建标签容器
-        const tagContainer = document.createElement('div');
-        tagContainer.className = 'relative w-full h-96 border border-gray-600';
-        interestsList.innerHTML = ''; // 清除原有内容
-        interestsList.appendChild(tagContainer);
-
-        // 计算标签大致尺寸
-        const padding = 20;    // 增加标签间距
-
-        // 已放置的标签位置和尺寸
-        const placedTags = [];
-
-        // 检查位置是否重叠
-        function isOverlapping(x, y, size) {
-            const margin = size * 0.2; // 根据球体大小调整边距
-            for (const tag of placedTags) {
-                const dx = x - tag.x;
-                const dy = y - tag.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < (size + tag.width) / 2 + margin) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        // 获取随机位置
-        function getRandomPosition(size) {
-            const containerWidth = tagContainer.clientWidth || 600;
-            const containerHeight = tagContainer.clientHeight || 400;
-            let x, y;
-            let attempts = 0;
-            const maxAttempts = 100;
-
-            do {
-                x = padding + Math.random() * (containerWidth - size - 2 * padding);
-                y = padding + Math.random() * (containerHeight - size - 2 * padding);
-                attempts++;
-                
-                // 如果尝试次数过多，尝试在不同区域
-                if (attempts > maxAttempts / 2) {
-                    // 将容器分成四个区域，根据尝试次数选择不同区域
-                    const area = Math.floor((attempts - maxAttempts/2) / (maxAttempts/8));
-                    switch(area) {
-                        case 0: // 左上
-                            x = padding + Math.random() * (containerWidth/2 - size - padding);
-                            y = padding + Math.random() * (containerHeight/2 - size - padding);
-                            break;
-                        case 1: // 右上
-                            x = containerWidth/2 + Math.random() * (containerWidth/2 - size - padding);
-                            y = padding + Math.random() * (containerHeight/2 - size - padding);
-                            break;
-                        case 2: // 左下
-                            x = padding + Math.random() * (containerWidth/2 - size - padding);
-                            y = containerHeight/2 + Math.random() * (containerHeight/2 - size - padding);
-                            break;
-                        case 3: // 右下
-                            x = containerWidth/2 + Math.random() * (containerWidth/2 - size - padding);
-                            y = containerHeight/2 + Math.random() * (containerHeight/2 - size - padding);
-                            break;
-                    }
-                }
-            } while (isOverlapping(x, y, size) && attempts < maxAttempts);
-
-            return { x, y, width: size, height: size };
-        }
-
+        // 清除原有内容
+        interestsList.innerHTML = '';
+        
+        // 彩虹渐变色彩
+        const rainbowColors = [
+            '#FF3B30', // 红色
+            '#FF9500', // 橙色
+            '#FFCC00', // 黄色
+            '#34C759', // 绿色
+            '#5AC8FA', // 青色
+            '#007AFF', // 蓝色
+            '#5E5CE6', // 靛蓝色
+            '#AF52DE'  // 紫色
+        ];
+        
         // 创建兴趣标签
-        // 首先计算基准字体大小
-        const calculateBaseFontSize = () => {
-            const minSize = 60; // 最小圆的直径
-            const maxSize = 140; // 最大圆的直径
-            const baseFontSize = minSize * 0.3; // 基准字体大小为最小圆直径的30%
+        interests.forEach((interest, index) => {
+            // 计算彩虹渐变色彩索引，确保标签顺序就是彩虹顺序
+            const colorIndex = index % rainbowColors.length;
+            const color = rainbowColors[colorIndex];
             
-            // 计算每个标签的最佳字体大小
-            const fontSizes = interests.map(interest => {
-                const tempSpan = document.createElement('span');
-                tempSpan.style.visibility = 'hidden';
-                tempSpan.style.position = 'absolute';
-                tempSpan.style.fontSize = `${baseFontSize}px`;
-                tempSpan.style.whiteSpace = 'normal';
-                tempSpan.style.wordBreak = 'break-word';
-                tempSpan.textContent = interest.name;
-                document.body.appendChild(tempSpan);
-                
-                const textWidth = tempSpan.offsetWidth;
-                const textHeight = tempSpan.offsetHeight;
-                document.body.removeChild(tempSpan);
-                
-                // 根据文本长度调整字体大小
-                const textLength = interest.name.length;
-                const adjustedSize = baseFontSize * (10 / Math.max(textLength, 10));
-                
-                return adjustedSize;
-            });
+            const tag = document.createElement('div');
+            tag.className = 'interest-tag';
+            // 使用线性渐变背景
+            tag.style.background = `linear-gradient(135deg, ${color}22, ${color}44)`;
+            tag.style.color = color;
+            tag.style.borderColor = `${color}77`;
+            tag.style.animationDelay = `${index * 0.05}s`;
+            tag.innerHTML = interest.name;
+            tag.style.position = 'relative';
             
-            // 返回最小的字体大小作为统一大小
-            return Math.min(...fontSizes);
-        };
+            interestsList.appendChild(tag);
+        });
         
-        const uniformFontSize = calculateBaseFontSize();
-        
-        const createNeuralNetwork = () => {
-            const container = document.createElement('div');
-            container.className = 'neural-container';
-            tagContainer.appendChild(container);
-
-            // 创建SVG元素用于绘制连接线
-            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            svg.style.position = 'absolute';
-            svg.style.width = '100%';
-            svg.style.height = '100%';
-            svg.style.zIndex = '1';
-            container.appendChild(svg);
-
-            // 创建神经元节点
-            const neurons = interests.map((interest) => {
-                const size = 100 + (interest.weight * 10);
-                const position = getRandomPosition(size);
-
-                const neuron = document.createElement('div');
-                neuron.className = 'neuron';
-                neuron.style.width = `${size}px`;
-                neuron.style.height = `${size}px`;
-                neuron.style.left = `${position.x}px`;
-                neuron.style.top = `${position.y}px`;
-
-                const content = document.createElement('div');
-                content.className = 'neuron-content';
-                content.style.fontSize = `${Math.max(14, size * 0.16)}px`;
-                content.textContent = interest.name;
-
-                neuron.appendChild(content);
-                container.appendChild(neuron);
-
-                return { element: neuron, position, size };
-            });
-
-            // 创建连接线
-            neurons.forEach((neuron, i) => {
-                neurons.slice(i + 1).forEach(target => {
-                    const dx = target.position.x - neuron.position.x;
-                    const dy = target.position.y - neuron.position.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 300) { // 减少连接距离
-                        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                        path.classList.add('neural-connection');
-                        
-                        // 使用直线连接
-                        const d = `M ${neuron.position.x + neuron.size/2} ${neuron.position.y + neuron.size/2} 
-                                 L ${target.position.x + target.size/2} ${target.position.y + target.size/2}`;
-                        
-                        path.setAttribute('d', d);
-                        svg.appendChild(path);
+        // 添加标签CSS样式
+        if (!document.getElementById('interest-tag-style')) {
+            const style = document.createElement('style');
+            style.id = 'interest-tag-style';
+            style.textContent = `
+                .interest-tag {
+                    display: inline-block;
+                    padding: 0.5rem 1rem;
+                    border-radius: 9999px;
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                    border: 1px solid;
+                    transition: all 0.3s ease;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    animation: tagFadeIn 0.5s ease forwards;
+                    cursor: default;
+                    margin-bottom: 0.5rem;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                }
+                
+                @keyframes tagFadeIn {
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
                     }
-                });
-            });
-
-            // 添加背景粒子效果
-            setInterval(() => {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * container.offsetWidth + 'px';
-                particle.style.top = container.offsetHeight + 'px';
-                container.appendChild(particle);
-
-                // 移除粒子
-                setTimeout(() => {
-                    particle.remove();
-                }, 8000);
-            }, 300);
-        };
-
-        // 替换原有的标签创建代码
-        createNeuralNetwork();
+                }
+                
+                .interest-tag:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    border-width: 2px;
+                }
+            `;
+            document.head.appendChild(style);
+        }
 
         // Add skills
         const skillsList = document.getElementById('skills-list');
