@@ -1524,19 +1524,14 @@
                         {
                             category: "NFT and Blockchain",
                             items: ["Solidity", "Ethereum", "Polygon", "Binance Smart Chain"]
-                        },
-                        {
-                            category: "AI/ML",
-                            items: ["PyTorch", "TensorFlow", "Scikit-learn", "Computer Vision"]
                         }
+                        
                        
                     ]
                 }
             },
             social: {
-                github: "https://github.com/johndoe",
-                linkedin: "https://linkedin.com/in/johndoe",
-                twitter: "https://twitter.com/johndoe"
+
             },
             education: [
                 {
@@ -1547,17 +1542,17 @@
                     description: "Majoring in Artificial Intelligence and Machine Learning, GPA: 3.8/4.0. Received Dean's List honors twice, participated in AI research lab projects."
                 },
                 {
+                    school: "Hai Liang Middle School",
+                    degree: "",
+                    startDate: "2020-09",
+                    endDate: "2023-06",
+                    description: ""
+                },
+                {
                     school: "Wilbraham and Monson Academy",
                     degree: "Junior-Senior",
                     startDate: "2025-09",
                     endDate: "2027-06",
-                    description: ""
-                },
-                {
-                    school: "Hai Liang Middle School",
-                    degree: "Freshman",
-                    startDate: "2022-09",
-                    endDate: "2023-06",
                     description: ""
                 }
             ],
@@ -1726,9 +1721,16 @@ The success of this competition is attributed to the effort and dedication of ev
                     date: "2024-01"
                 },
                 {
+                    name: "Ningbo Municipal C++ Proficiency",
+                    achievement: "Silver Medal",
+                    period: "2021",
+                    description: "Win the Silver Medal in the Ningbo Municipal C++ Proficiency Competition.",
+                    date: "2021"
+                },
+                {
                     name: "CSP-J",
                     achievement: "National First Prize",
-                    period: "Spring 2026",
+                    period: "Spring 2022",
                     description: "",
                     date: "2022-10"
                 }
@@ -2755,14 +2757,33 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             const timelineElement = document.createElement('div');
             timelineElement.className = `timeline-item ${item.type}`;
             
-            // 解析日期
-            const date = new Date(item.date + 'T00:00:00Z');
-            const year = date.getFullYear();
-            const month = date.toLocaleString('default', { month: 'short', timeZone: 'UTC' });
-            const day = date.getUTCDate();
+            // 解析日期 - 更全面地修复日期问题
+            let year, month, day;
+            const dateParts = item.date.split('-');
+            
+            // 根据日期格式分别处理
+            if (dateParts.length === 1) {
+                // 只有年份 (e.g., "2021")
+                year = parseInt(dateParts[0]);
+                month = '';
+                day = '';
+            } else if (dateParts.length === 2) {
+                // 年份和月份 (e.g., "2024-01")
+                year = parseInt(dateParts[0]);
+                // 将月份数字转换为月份名称
+                const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                month = monthNames[parseInt(dateParts[1]) - 1]; // 减1是因为月份从1开始，而数组索引从0开始
+                day = '';
+            } else {
+                // 完整日期 (e.g., "2024-01-15")
+                year = parseInt(dateParts[0]);
+                const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                month = monthNames[parseInt(dateParts[1]) - 1];
+                day = parseInt(dateParts[2]);
+            }
             
             // 检查日期格式是否包含具体日期
-            const hasDay = item.date.split('-').length === 3;
+            const hasDay = dateParts.length === 3;
             
             timelineElement.innerHTML = `
                 <div class="timeline-date">
@@ -2941,20 +2962,114 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
 
         // Add skills
         const skillsList = document.getElementById('skills-list');
-        profile.basics.about.skills.forEach(skillCategory => {
+        
+        // 矩阵文字效果函数
+        function createMatrixEffect(element, finalText) {
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let iterations = 0;
+            const maxIterations = 12;
+            
+            const interval = setInterval(() => {
+                element.innerText = finalText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iterations) {
+                            return finalText[index];
+                        }
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join("");
+                
+                if (iterations >= finalText.length) {
+                    clearInterval(interval);
+                }
+                
+                iterations += 1/3;
+            }, 30);
+        }
+
+        profile.basics.about.skills.forEach((skillCategory, index) => {
             const categoryElement = document.createElement('div');
-            categoryElement.className = 'bg-gray-800 p-4 rounded-lg';
-            categoryElement.innerHTML = `
-                <h4 class="text-white font-medium mb-3">${skillCategory.category}</h4>
-                <div class="flex flex-wrap gap-2">
-                    ${skillCategory.items.map(skill => `
-                        <span class="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm">${skill}</span>
-                    `).join('')}
-                </div>
-            `;
+            categoryElement.className = 'bg-black p-4 rounded-lg skill-card';
+            categoryElement.style.opacity = '1'; // 移除初始透明
+            categoryElement.style.transform = 'translateY(0)'; // 移除初始位移
+            
+            const categoryTitle = document.createElement('h4');
+            categoryTitle.className = 'text-green-400 font-medium mb-3 matrix-text';
+            categoryTitle.textContent = skillCategory.category;
+            
+            const skillsContainer = document.createElement('div');
+            skillsContainer.className = 'flex flex-wrap gap-2';
+            
+            skillCategory.items.forEach((skill, skillIndex) => {
+                const skillSpan = document.createElement('span');
+                skillSpan.className = 'px-2 py-1 bg-black text-green-300 rounded text-sm border border-green-500/30 hover:border-green-500 transition-colors matrix-text';
+                skillSpan.textContent = skill;
+                skillsContainer.appendChild(skillSpan);
+            });
+            
+            categoryElement.appendChild(categoryTitle);
+            categoryElement.appendChild(skillsContainer);
             skillsList.appendChild(categoryElement);
+            
+            // 立即开始矩阵效果，只添加很小的递增延迟
+            setTimeout(() => {
+                createMatrixEffect(categoryTitle, skillCategory.category);
+                
+                // 为每个技能标签添加矩阵效果，每个都有一点延迟
+                skillsContainer.querySelectorAll('.matrix-text').forEach((element, i) => {
+                    setTimeout(() => {
+                        createMatrixEffect(element, element.textContent);
+                    }, i * 100); // 减少延迟时间到100ms
+                });
+            }, index * 100); // 每个类别之间只间隔100ms
         });
 
+        // 更新技能卡片样式
+        if (!document.getElementById('skill-card-style')) {
+            const style = document.createElement('style');
+            style.id = 'skill-card-style';
+            style.textContent = `
+                .skill-card {
+                    border: 1px solid rgba(34, 197, 94, 0.2);
+                    transition: all 0.3s ease;
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .skill-card:hover {
+                    transform: translateY(-5px) !important;
+                    border-color: rgba(34, 197, 94, 0.4);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                }
+                
+                .matrix-text {
+                    font-family: monospace;
+                }
+                
+                .skill-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        90deg,
+                        transparent,
+                        rgba(34, 197, 94, 0.1),
+                        transparent
+                    );
+                    transition: 0.5s;
+                }
+                
+                .skill-card:hover::before {
+                    left: 100%;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
         // 详情页面处理
         function showDetail(type, item) {
             const detailSection = document.getElementById('detail-section');
