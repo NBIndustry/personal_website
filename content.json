@@ -3,7 +3,7 @@
         "name": "Kyrie Zhang",
         "title": "Founder of Sette Studio",
         "avatar": "IMG 1517.JPG",
-        "description": "计算机科学专业大三三学生，对人工智能和Web开发充满热情，积极参与开源项目，热衷于将创新技术应用到实际问题中。",
+        "description": "Junior Computer Science student, passionate about artificial intelligence and web development, actively participating in open-source projects, and dedicated to applying innovative technologies to practical problems.",
         "contact": {
             "email": "kyriezhang02@outlook.com",
             "phone": "+1 (781) 8736060",
@@ -18,98 +18,98 @@
     },
     "sections": {
         "about": {
-            "title": "关于我",
-            "content": "这里是关于我的详细介绍..."
+            "title": "About Me",
+            "content": "Here is a detailed introduction about me..."
         },
         "timeline": {
-            "title": "时间线",
+            "title": "Timeline",
             "items": [
                 {
                     "type": "education",
-                    "title": "波士顿大学",
-                    "subtitle": "计算机科学专业",
-                    "date": "2021 - 至今",
-                    "description": "主修计算机科学，专注于人工智能和Web开发"
+                    "title": "Boston University",
+                    "subtitle": "Computer Science Major",
+                    "date": "2021 - Present",
+                    "description": "Majoring in Computer Science, focusing on Artificial Intelligence and Web Development"
                 }
             ]
         },
         "projects": {
-            "title": "项目展示",
+            "title": "Projects",
             "items": [
                 {
                     "name": "Sun and Ocean",
-                    "description": "基于区块链的AI生成艺术NFT项目",
+                    "description": "Blockchain-based AI-generated art NFT project",
                     "image": "path/to/project1-image.jpg",
                     "tags": ["Blockchain", "NFT", "AI Art"]
                 },
                 {
-                    "name": "项目二",
-                    "description": "项目二描述",
+                    "name": "Project Two",
+                    "description": "Project two description",
                     "image": "path/to/project2-image.jpg",
                     "tags": ["Web", "AI", "Frontend"]
                 }
             ]
         },
         "competitions": {
-            "title": "竞赛经历",
+            "title": "Competitions",
             "items": [
                 {
-                    "name": "2023年竞赛",
+                    "name": "2023 Competition",
                     "date": "2023",
-                    "achievement": "获得奖项",
-                    "description": "竞赛详细描述"
+                    "achievement": "Award Received",
+                    "description": "Detailed competition description"
                 },
                 {
-                    "name": "2022年竞赛",
+                    "name": "2022 Competition",
                     "date": "2022",
-                    "achievement": "获得奖项",
-                    "description": "竞赛详细描述"
+                    "achievement": "Award Received",
+                    "description": "Detailed competition description"
                 }
             ]
         },
         "activities": {
-            "title": "活动经历",
+            "title": "Activities",
             "items": [
                 {
-                    "name": "2023年活动",
+                    "name": "2023 Activity",
                     "date": "2023",
-                    "role": "活动角色",
-                    "description": "活动详细描述"
+                    "role": "Activity Role",
+                    "description": "Detailed activity description"
                 },
                 {
-                    "name": "2022年活动",
+                    "name": "2022 Activity",
                     "date": "2022",
-                    "role": "活动角色",
-                    "description": "活动详细描述"
+                    "role": "Activity Role",
+                    "description": "Detailed activity description"
                 }
             ]
         },
         "interests": {
-            "title": "兴趣方向",
+            "title": "Interests",
             "items": [
                 {
-                    "name": "人工智能",
+                    "name": "Artificial Intelligence",
                     "icon": "🤖",
                     "color": "#FF6B6B",
-                    "description": "深度学习、机器学习、自然语言处理"
+                    "description": "Deep Learning, Machine Learning, Natural Language Processing"
                 },
                 {
-                    "name": "Web开发",
+                    "name": "Web Development",
                     "icon": "🌐",
                     "color": "#4ECDC4",
-                    "description": "前端开发、后端开发、全栈开发"
+                    "description": "Frontend Development, Backend Development, Full-Stack Development"
                 },
                 {
-                    "name": "区块链",
+                    "name": "Blockchain",
                     "icon": "⛓️",
                     "color": "#45B7D1",
-                    "description": "智能合约、DeFi、NFT"
+                    "description": "Smart Contracts, DeFi, NFT"
                 },
                 {
-                    "name": "开源项目",
+                    "name": "Open Source Projects",
                     "icon": "📦",
                     "color": "#96CEB4",
-                    "description": "参与开源社区、贡献代码"
+                    "description": "Participating in open source communities, contributing code"
                 }
             ]
         }
