@@ -1502,7 +1502,7 @@
                 avatar: "images/image1.jpeg",
                 bio: "",
                 about: {
-                    intro: "Hello! I'm Kyrie Zhang.",
+                    intro: "Hi, I'm Kyrie Zhang.I'm a high school student with a strong interest in technology, creativity, and personal growth. I enjoy exploring new ideas, learning through challenges, and finding balance between discipline and curiosity. Whether I'm working on something technical or artistic, I always aim to stay thoughtful, driven, and authentic. Thanks for visiting my site — I'm excited to share a bit of my world with you.",
                     interests: [
                         { name: "Photography", weight: 5 },
                         { name: "NFT", weight: 4 },
@@ -1883,9 +1883,6 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                             <div class="space-y-8">
                                 <!-- Introduction -->
                                 <div>
-                                    <!-- This is the "About Me" introduction text that will be dynamically added to the element with id "about-intro" -->
-                                    <!-- The content is modified in the JavaScript file, usually in main.js or a similar file where you can find code related to about-intro -->
-                                    <!-- This element is empty because the content will be loaded dynamically through JavaScript, making it easier to maintain and update personal introductions without modifying HTML -->
                                     <p class="text-gray-300 text-lg leading-relaxed" id="about-intro"></p>
                                 </div>
 
@@ -2883,7 +2880,70 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
         });
 
         // Fill about me section
-        document.getElementById('about-intro').textContent = profile.basics.about.intro;
+        const aboutIntro = document.getElementById('about-intro');
+        const text = profile.basics.about.intro;
+        let index = 0;
+        
+        // 添加光标样式
+        if (!document.getElementById('cursor-style')) {
+            const style = document.createElement('style');
+            style.id = 'cursor-style';
+            style.textContent = `
+                #about-intro::after {
+                    content: '|';
+                    color: #4ade80;
+                    margin-left: 2px;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    animation: cursor 0.5s infinite;
+                    position: relative;
+                    top: -1px;
+                }
+                
+                @keyframes cursor {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                }
+                
+                .about-char {
+                    opacity: 0;
+                    animation: fadeIn 0.01s forwards;
+                }
+                
+                @keyframes fadeIn {
+                    to { opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // 逐字显示函数
+        function typeNextChar() {
+            if (index < text.length) {
+                const char = text[index];
+                const span = document.createElement('span');
+                span.textContent = char;
+                span.className = 'about-char';
+                aboutIntro.appendChild(span);
+                index++;
+                
+                // 调整不同标点符号的停顿时间
+                let delay;
+                if (char === '.') {
+                    delay = 800; // 句号停顿最长
+                } else if (char === '—') {
+                    delay = 600; // 破折号停顿次之
+                } else if (/[,!?]/.test(char)) {
+                    delay = 400; // 其他标点停顿适中
+                } else {
+                    delay = 25; // 普通字符快速打字
+                }
+                setTimeout(typeNextChar, delay);
+            }
+        }
+        
+        // 开始打字效果
+        typeNextChar();
 
         // Add interests
         const interestsList = document.getElementById('interests-list');
