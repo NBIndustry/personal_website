@@ -3,7 +3,7 @@ name: Notify Discord on Push
 on:
   push:
     branches:
-      - main   # 如果你是push到master，就写master
+      - master   # 如果你是push到master，就写master
 
 jobs:
   send-discord-notification:
