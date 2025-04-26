@@ -3,22 +3,24 @@ name: Notify Discord on Push
 on:
   push:
     branches:
-      - main   # 如果你是push到master，就写master
+      - master
 
 jobs:
-  send-discord-notification:
+  notify:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send a simple notification to Discord
+      - name: Send message to Discord
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
           COMMIT_AUTHOR: ${{ github.actor }}
         run: |
-          curl -X POST \
-          -H "Content-Type: application/json" \
+          if [ -z "$COMMIT_MESSAGE" ]; then
+            COMMIT_MESSAGE="No commit message provided"
+          fi
+          curl -X POST -H "Content-Type: application/json" \
           -d "{
-            \"content\": \"🚀 **$COMMIT_AUTHOR** just pushed to **personal-website**!\n💬 Commit Message: _${COMMIT_MESSAGE}_\"
+            \"content\": \"🚀 **$COMMIT_AUTHOR** just pushed to **master**!\n💬 Commit Message: _${COMMIT_MESSAGE}_\"
           }" \
           $DISCORD_WEBHOOK_URL
