@@ -13,7 +13,7 @@
                     typography: {
                         DEFAULT: {
                             css: {
-                                color: '#ffffff',
+                                color: '#9ca3af',
                                 h1: {
                                     color: '#ffffff',
                                 },
@@ -33,26 +33,12 @@
                                     },
                                 },
                                 code: {
-                                    color: '#ffffff',
-                                    background: 'transparent',
+                                    color: '#e5e7eb',
                                 },
                                 blockquote: {
-                                    color: '#ffffff',
-                                    borderLeftColor: 'rgba(255, 255, 255, 0.3)',
-                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                    color: '#9ca3af',
+                                    borderLeftColor: '#374151',
                                 },
-                                p: {
-                                    color: '#ffffff',
-                                },
-                                ul: {
-                                    color: '#ffffff',
-                                },
-                                ol: {
-                                    color: '#ffffff',
-                                },
-                                li: {
-                                    color: '#ffffff',
-                                }
                             },
                         },
                     },
@@ -64,107 +50,122 @@
         /* Markdown 内容样式 */
         .markdown-content {
             line-height: 1.8;
-            color: #ffffff !important;
-            background-color: transparent !important;
+            color: #ffffff;
         }
-
-        .markdown-content h1,
-        .markdown-content h2,
-        .markdown-content h3,
-        .markdown-content p,
-        .markdown-content ul,
-        .markdown-content ol,
-        .markdown-content li,
-        .markdown-content blockquote,
-        .markdown-content code,
-        .markdown-content pre,
-        .markdown-content table,
-        .markdown-content th,
-        .markdown-content td {
-            color: #ffffff !important;
-            background-color: transparent !important;
-        }
-
+        
         .markdown-content h1 {
             font-size: 2.25rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
         }
-
+        
         .markdown-content h2 {
             font-size: 1.75rem;
             font-weight: 600;
             margin-top: 2rem;
             margin-bottom: 1rem;
             padding-bottom: 0.25rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
         }
-
+        
         .markdown-content h3 {
             font-size: 1.5rem;
             font-weight: 600;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
+            color: #ffffff;
         }
-
+        
+        .markdown-content p {
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .markdown-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .markdown-content ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .markdown-content li {
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
         .markdown-content blockquote {
-            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            border-left: 4px solid #4b5563;
             padding-left: 1rem;
             margin: 1.5rem 0;
-            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: #ffffff;
         }
-
+        
         .markdown-content code {
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(75, 85, 99, 0.2);
             padding: 0.2rem 0.4rem;
             border-radius: 0.25rem;
             font-size: 0.875rem;
+            color: #ffffff;
         }
-
+        
         .markdown-content pre {
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(31, 41, 55, 0.5);
             padding: 1rem;
             border-radius: 0.5rem;
             overflow-x: auto;
             margin: 1.5rem 0;
+            color: #ffffff;
         }
-
+        
         .markdown-content pre code {
-            background: transparent !important;
+            background: transparent;
             padding: 0;
             border-radius: 0;
+            color: #ffffff;
         }
-
+        
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .markdown-content hr {
+            border: 0;
+            border-top: 1px solid rgba(75, 85, 99, 0.2);
+            margin: 2rem 0;
+        }
+        
         .markdown-content table {
+            width: 100%;
             border-collapse: collapse;
             margin: 1.5rem 0;
-            width: 100%;
+            color: #ffffff;
         }
         
         .markdown-content th,
         .markdown-content td {
             padding: 0.75rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(75, 85, 99, 0.2);
+            color: #ffffff;
         }
         
         .markdown-content th {
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(31, 41, 55, 0.5);
             font-weight: 600;
+            color: #ffffff;
         }
-
-        /* 确保 prose 类也使用这些样式 */
-        .prose {
-            color: #ffffff !important;
-            background-color: transparent !important;
-        }
-
-        .prose * {
-            color: #ffffff !important;
-            background-color: transparent !important;
-        }
-
+        
         /* 项目画廊样式 */
         .gallery-container {
             position: relative;
@@ -1479,588 +1480,6 @@
             z-index: 10;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* 宝石样式 */
-        .hexagon {
-            position: absolute;
-            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-            background: linear-gradient(135deg, 
-                rgba(234, 88, 12, 0.8) 0%,
-                rgba(249, 115, 22, 0.9) 25%,
-                rgba(255, 255, 255, 0.95) 50%,
-                rgba(249, 115, 22, 0.9) 75%,
-                rgba(234, 88, 12, 0.8) 100%
-            );
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            box-shadow: 
-                0 0 30px rgba(249, 115, 22, 0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(8px);
-        }
-        
-        .hexagon::before {
-            content: '';
-            position: absolute;
-            inset: 2px;
-            background: linear-gradient(135deg,
-                rgba(251, 146, 60, 0.9) 0%,
-                rgba(253, 186, 116, 0.95) 30%,
-                rgba(255, 255, 255, 1) 50%,
-                rgba(253, 186, 116, 0.95) 70%,
-                rgba(251, 146, 60, 0.9) 100%
-            );
-            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-            z-index: 1;
-            filter: brightness(1.2) contrast(1.2);
-            opacity: 0.9;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .hexagon::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                linear-gradient(45deg, 
-                    transparent 0%,
-                    rgba(255, 255, 255, 0) 45%,
-                    rgba(255, 255, 255, 0.9) 50%,
-                    rgba(255, 255, 255, 0) 55%,
-                    transparent 100%
-                ),
-                linear-gradient(-45deg,
-                    transparent 0%,
-                    rgba(255, 255, 255, 0) 45%,
-                    rgba(255, 255, 255, 0.6) 50%,
-                    rgba(255, 255, 255, 0) 55%,
-                    transparent 100%
-                );
-            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-            mix-blend-mode: overlay;
-            opacity: 0.8;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: shimmer 3s infinite linear;
-        }
-        
-        @keyframes shimmer {
-            0% {
-                background-position: -200% -200%, 200% 200%;
-            }
-            100% {
-                background-position: 200% 200%, -200% -200%;
-            }
-        }
-        
-        .hexagon:hover {
-            transform: scale(1.15) rotateY(30deg) rotateX(15deg);
-            box-shadow: 
-                0 0 50px rgba(249, 115, 22, 0.5),
-                inset 0 0 30px rgba(255, 255, 255, 0.8);
-            filter: brightness(1.2);
-        }
-        
-        .hexagon:hover::before {
-            filter: brightness(1.4) contrast(1.4);
-            opacity: 0.95;
-        }
-        
-        .hexagon:hover::after {
-            opacity: 1;
-            background-size: 200% 200%, 200% 200%;
-        }
-        
-        .hexagon-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            padding: 0 20%;
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 
-                0 0 10px rgba(255, 255, 255, 0.8),
-                0 2px 4px rgba(0, 0, 0, 0.4);
-            font-weight: 700;
-            transform-style: preserve-3d;
-            backface-visibility: hidden;
-            letter-spacing: 0.5px;
-        }
-
-        @keyframes floating {
-            0% {
-                transform: translate(0, 0) rotateY(0deg) rotateX(0deg);
-            }
-            25% {
-                transform: translate(10px, -10px) rotateY(10deg) rotateX(5deg);
-            }
-            50% {
-                transform: translate(-5px, 15px) rotateY(-10deg) rotateX(-5deg);
-            }
-            75% {
-                transform: translate(-15px, -5px) rotateY(5deg) rotateX(10deg);
-            }
-            100% {
-                transform: translate(0, 0) rotateY(0deg) rotateX(0deg);
-            }
-        }
-
-        .floating {
-            animation: none;
-        }
-
-        .floating:hover {
-            animation-play-state: paused;
-        }
-
-        /* 神经网络容器样式 */
-        .neural-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(30, 30, 30, 0.95));
-            overflow: hidden;
-        }
-
-        /* 神经元节点样式 */
-        .neuron {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background: rgba(20, 20, 20, 0.6);
-            border: 2px solid rgba(249, 115, 22, 0.3);
-            border-radius: 12px;
-            transform-style: preserve-3d;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(8px);
-            box-shadow: 
-                0 0 20px rgba(249, 115, 22, 0.1),
-                inset 0 0 15px rgba(249, 115, 22, 0.1);
-        }
-
-        .neuron::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 10px;
-            background: linear-gradient(135deg,
-                rgba(249, 115, 22, 0.1),
-                rgba(249, 115, 22, 0.05)
-            );
-            opacity: 0.5;
-            z-index: 1;
-        }
-
-        .neuron::after {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: 11px;
-            background: linear-gradient(135deg,
-                rgba(249, 115, 22, 0.5),
-                transparent 60%
-            );
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .neuron:hover {
-            transform: scale(1.1) translateZ(20px);
-            border-color: rgba(249, 115, 22, 0.8);
-            background: rgba(30, 30, 30, 0.8);
-            box-shadow: 
-                0 0 30px rgba(249, 115, 22, 0.2),
-                inset 0 0 20px rgba(249, 115, 22, 0.2);
-        }
-
-        .neuron:hover::after {
-            opacity: 0.2;
-        }
-
-        .neuron-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-            text-align: center;
-            padding: 10px;
-            letter-spacing: 0.5px;
-            text-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
-        }
-
-        /* 神经元连接线样式 */
-        .neural-connection {
-            position: absolute;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .neural-connection path {
-            stroke: rgba(255, 255, 255, 0.15);
-            stroke-width: 0.3;
-            fill: none;
-            stroke-dasharray: none;
-            filter: none;
-            transition: stroke 0.3s ease;
-        }
-
-        /* 当鼠标悬停在神经元上时，相连的线会变亮 */
-        .neuron:hover ~ .neural-connection path {
-            stroke: rgba(255, 255, 255, 0.3);
-        }
-
-        /* 背景粒子效果 */
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(249, 115, 22, 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1;
-            animation: particleFloat 8s linear infinite;
-            filter: blur(1px);
-        }
-
-        @keyframes particleFloat {
-            0% {
-                opacity: 0;
-                transform: translate(0, 100%) scale(1);
-            }
-            20% {
-                opacity: 0.3;
-                transform: translate(10px, 60%) scale(1.2);
-            }
-            40% {
-                opacity: 0.5;
-                transform: translate(-10px, 30%) scale(1);
-            }
-            60% {
-                opacity: 0.3;
-                transform: translate(5px, 10%) scale(1.1);
-            }
-            80% {
-                opacity: 0.2;
-                transform: translate(-5px, -10%) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(0, -30%) scale(0.8);
-            }
-        }
-
-        /* 时间线样式 */
-        .timeline-item {
-            position: relative;
-            display: grid;
-            grid-template-columns: 150px 1px 1fr;
-            gap: 20px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-bottom: 40px;
-        }
-
-        .timeline-item.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .timeline-item.hide {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-        .timeline-date {
-            text-align: right;
-            padding-right: 20px;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.875rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-top: 4px;
-        }
-
-        .timeline-date .year {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 4px;
-        }
-
-        .timeline-line {
-            position: relative;
-            width: 1px;
-            background: rgba(255, 255, 255, 0.1);
-            margin-bottom: -40px; /* 抵消最后一个项目的margin-bottom */
-        }
-
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-content {
-            padding-left: 20px;
-        }
-
-        /* 根据不同类型设置不同的颜色 */
-        .timeline-item.education .timeline-line::before {
-            background: #3b82f6;
-        }
-
-        .timeline-item.summer .timeline-line::before {
-            background: #06b6d4;
-        }
-
-        .timeline-item.project .timeline-line::before {
-            background: #22c55e;
-        }
-
-        .timeline-item.competition .timeline-line::before {
-            background: #eab308;
-        }
-
-        .timeline-item.activity .timeline-line::before {
-            background: #a855f7;
-        }
-
-        .timeline-item:hover .timeline-line::before {
-            transform: translateX(-50%) scale(1.2);
-            box-shadow: 0 0 10px currentColor;
-        }
-
-        /* 卡片动画效果 */
-        @keyframes slideInFromLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .card {
-            background: rgba(38, 38, 38, 0.5);
-            border: 1px solid rgba(75, 85, 99, 0.2);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            backdrop-filter: blur(12px);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateX(-100%);
-            animation: slideInFromLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-
-        .card:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-
-        .card:nth-child(3) {
-            animation-delay: 0.2s;
-        }
-
-        .card:nth-child(4) {
-            animation-delay: 0.3s;
-        }
-
-        .card:nth-child(5) {
-            animation-delay: 0.4s;
-        }
-
-        .card:nth-child(n+6) {
-            animation-delay: 0.5s;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.05),
-                transparent
-            );
-            transition: 0.5s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(75, 85, 99, 0.4);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card:hover::before {
-            left: 100%;
-        }
-
-        .card:active {
-            transform: translateY(-2px) scale(0.98);
-        }
-
-        /* 修改tab切换时的动画 */
-        .tab-content:not(.hidden) .card {
-            opacity: 0;
-            transform: translateX(-100%);
-            animation: slideInFromLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-
-        .competition-card {
-            border-left: 4px solid #eab308;
-        }
-
-        .activity-card {
-            border-left: 4px solid #a855f7;
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-subtitle {
-            font-size: 0.875rem;
-            color: #9ca3af;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-period {
-            font-size: 0.875rem;
-            color: #6b7280;
-            padding: 0.25rem 0.75rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 9999px;
-        }
-
-        .card-description {
-            color: #9ca3af;
-            font-size: 0.875rem;
-            line-height: 1.5;
-        }
-
-        /* 返回按钮动画 */
-        #back-button {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            background: rgba(38, 38, 38, 0.5);
-            backdrop-filter: blur(8px);
-            transform-origin: left center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        #back-button svg {
-            transform: translateX(0);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        #back-button:hover {
-            background: rgba(38, 38, 38, 0.8);
-            transform: translateX(-4px);
-        }
-
-        #back-button:hover svg {
-            transform: translateX(-4px);
-        }
-
-        #back-button:active {
-            transform: translateX(-2px) scale(0.98);
-        }
-
-        #back-button::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 0.5rem;
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.1),
-                transparent
-            );
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        #back-button:hover::before {
-            opacity: 1;
-        }
-
-        /* 详情页面过渡动画优化 */
-        .slide-enter {
-            transform: translateX(100%) scale(0.95);
-            opacity: 0;
-        }
-
-        .slide-enter-active {
-            transform: translateX(0) scale(1);
-            opacity: 1;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide-exit {
-            transform: translateX(0) scale(1);
-            opacity: 1;
-        }
-
-        .slide-exit-active {
-            transform: translateX(-100%) scale(0.95);
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Interest Tags Styles */
-        .interest-tag {
-            position: relative;
-            transition: transform 0.3s ease;
-            background: rgba(31, 41, 55, 0.8);
-            backdrop-filter: blur(4px);
-            border-radius: 9999px;
-            padding: 0.5rem 1rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            display: inline-block;
-            margin: 0.25rem;
-        }
-
-        .interest-tag:hover {
-            transform: translateY(-3px);
-            z-index: 10;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
     </style>
 
     <script>
@@ -2086,15 +1505,15 @@
                         { name: "Photography", weight: 5 },
                         { name: "NFT", weight: 4 },
                         { name: "AI", weight: 3 },
-                        { name: "Programming", weight: 4 },
+                        { name: "programming", weight: 4 },
                         { name: "Vinyl Records", weight: 2 },
                         { name: "Film Photography", weight: 2 },
                         { name: "Sports Card Collection", weight: 2 },
                         { name: "Basketball", weight: 2 },
                         { name: "GYM", weight: 2 },
-                        { name: "Saxophone", weight: 2 },
+                        { name: "saxophone", weight: 2 },
                         { name: "Robotics", weight: 2 },
-                        { name: "Painting", weight: 2 },
+                        { name: "painting", weight: 2 },
                         { name: "Customized Keyboard", weight: 2 },
                         { name: "Jazz", weight: 2 },
                         { name: "Pickle Pall", weight: 2 },
@@ -2162,16 +1581,63 @@
                     name: "Sun and Ocean",
                     description: "Blockchain-based AI-generated art NFT project",
                     image: "images/SunAndOcean.jpg",
+                    photos: [
+                        "images/projects/sun-and-ocean.jpg",
+                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    ],
                     tags: ["Blockchain", "NFT", "AI Art"],
                     period: "February 2025",
                     role: "Project Leader",
                     date: "2025-02",
-                    postPath: "posts/sun-and-ocean.md"
+                    post:` 
+# Sun and Ocean NFT Project
+
+## Project Overview
+Sun and Ocean is an innovative NFT project that combines AI-generated art with blockchain technology to create unique digital artworks.
+
+## Technical Features
+- AI art generation
+- Smart contract development
+- NFT minting and trading
+- Community governance mechanisms
+
+## Innovations
+1. AI Art Creation
+   - Unique artistic style
+   - Dynamic generation algorithms
+   - Personalized customization
+
+2. Blockchain Integration
+   - Decentralized storage
+   - Smart contract automation
+   - Transparent transaction records
+
+3. Community Building
+   - Artist collaborations
+   - Collector interactions
+   - Community governance
+
+## Project Achievements
+- Successfully issued 1000 unique NFTs
+- Established an active community ecosystem
+- Realized artistic value and technological innovation
+
+## Project Showcase
+![NFT Artwork 1](images/projects/sun-and-ocean.jpg)
+![NFT Artwork 2](https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+![NFT Artwork 3](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)
+`
                 },
                 {
                     name: "Personal Website",
                     description: "Using Struct and AI to make a easy way to make a personal website",
                     image:   "images/personal_website.PNG",
+                    photos: [
+                        "images/personal_website.png",
+                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    ],
                     tags: ["HTML", "AI"],
                     period: "April 2025",
                     role: "Personal Project",
@@ -2182,6 +1648,11 @@
                     name: "Belonging",
                     description: "filmming about the belonging",
                     image:   "images/Belonging1.jpg",
+                    photos: [
+                        "images/Belonging2.jpg",
+                        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    ],
                     tags: ["Filmmaking", "Screenwriting"],
                     period: "December 2024",
                     role: "Screenwriter",
@@ -2206,7 +1677,30 @@ https://drive.google.com/file/d/1J6QGgzGMsBtyaCdDnPJ11-FB92rhqZcv/view?usp=shari
                     period: "2025",
                     description: "",
                     date: "2025-05",
-                    postPath: "_posts/2025-01-01-vex-world-championship.md"
+                    post: `
+# VEX World Championship 2025
+
+## Competition Overview
+VEX Robotics World Championship is the largest robotics competition globally, bringing together top competitors from around the world.
+
+## Preparation
+- Team formation and division of responsibilities
+- Robot design and optimization
+- Programming strategy development
+- Practical training and debugging
+
+## Technical Highlights
+1. Innovative mechanical structure design
+2. Efficient automatic control algorithms
+3. Precise sensor applications
+4. Stable competition performance
+
+## Outcomes
+- Enhanced team collaboration skills
+- Technological breakthroughs
+- Expanded international perspective
+- Valuable competition experience
+`
                 },
                 {
                     name: "VEX V5 Robotics US Open",
@@ -2503,10 +1997,10 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                                 </button>
                                 <h2 class="text-2xl font-bold text-white ml-4" id="detail-title"></h2>
                             </div>
-                            <div class="bg-transparent rounded-xl p-8">
+                            <div class="bg-[#262626] rounded-xl p-8">
                                 <div class="mb-6">
-                                    <div class="text-white mb-2" id="detail-meta"></div>
-                                    <div class="text-white text-lg" id="detail-description"></div>
+                                    <div class="text-gray-400 mb-2" id="detail-meta"></div>
+                                    <div class="text-gray-300 text-lg" id="detail-description"></div>
                                 </div>
                                 <div id="detail-content" class="prose prose-invert max-w-none">
                                     <!-- Detailed content will be added here dynamically -->
@@ -3348,7 +2842,7 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                     <h3 class="text-xl font-semibold text-white mb-2">${item.title}</h3>
                     <div class="text-gray-300 mb-1">${item.subtitle}</div>
                     <div class="text-sm text-gray-400 mb-2">${item.period}</div>
-                    <p class="text-gray-300">${item.description}</p>
+                    <p class="text-gray-300">"${item.description}"</p>
                 </div>
             `;
             
@@ -3452,7 +2946,7 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                     font-size: 1.2em;
                     font-weight: bold;
                     animation: cursor 0.5s infinite;
-            position: relative;
+                    position: relative;
                     top: -1px;
                 }
                 
@@ -3545,9 +3039,9 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             style.id = 'interest-tag-style';
             style.textContent = `
                 .interest-tag {
-            display: inline-block;
+                    display: inline-block;
                     padding: 0.5rem 1rem;
-            border-radius: 9999px;
+                    border-radius: 9999px;
                     font-size: 0.95rem;
                     font-weight: 500;
                     border: 1px solid;
@@ -3556,7 +3050,7 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                     transform: translateY(20px);
                     animation: tagFadeIn 0.5s ease forwards;
                     cursor: default;
-            margin-bottom: 0.5rem;
+                    margin-bottom: 0.5rem;
                     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                 }
                 
@@ -3686,86 +3180,38 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             document.head.appendChild(style);
         }
         
-        // 添加加载 Markdown 文件的函数
-        async function loadMarkdownPost(path) {
-            try {
-                const response = await fetch(path);
-                if (!response.ok) {
-                    throw new Error('Failed to load post content');
-                }
-                return await response.text();
-            } catch (error) {
-                console.error('Error loading post:', error);
-                return null;
-            }
-        }
-
-        // 修改 showDetail 函数
-        async function showDetail(type, item) {
+        // 详情页面处理
+        function showDetail(type, item) {
             const detailSection = document.getElementById('detail-section');
             const detailTitle = document.getElementById('detail-title');
+            const detailMeta = document.getElementById('detail-meta');
+            const detailDescription = document.getElementById('detail-description');
             const detailContent = document.getElementById('detail-content');
             
             // 存储当前的类型，用于返回
             detailSection.dataset.returnTo = type;
             
-            // 设置标题和基本信息
+            // 设置详情内容
             detailTitle.textContent = item.name;
+           
+            detailDescription.textContent = `"${item.description}"`;
             
-            // 显示加载状态
-            detailContent.innerHTML = `
-                <div class="flex justify-center items-center py-8">
-                    <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-orange-500"></div>
-                </div>
-            `;
-
-            // 加载并显示带有美化样式的内容
-            if (item.postPath) {
-                const postContent = await loadMarkdownPost(item.postPath);
-                if (postContent) {
-                    detailContent.innerHTML = `
-                        <div class="max-w-4xl mx-auto">
-                            <div class="mb-8 flex items-center justify-between">
-                                <div class="flex items-center space-x-4">
-                                    ${item.tags ? `
-                                        <div class="flex flex-wrap gap-2">
-                                            ${item.tags.map(tag => `
-                                                <span class="px-3 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">${tag}</span>
-                                            `).join('')}
-                                        </div>
-                                    ` : ''}
-                                </div>
-                                <div class="text-gray-400 text-sm">${item.period || ''}</div>
-                            </div>
-                            
-                            <div class="prose prose-invert prose-orange max-w-none">
-                                <div class="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm">
-                                    ${marked.parse(postContent)}
-                                </div>
-                            </div>
-                            
-                            ${item.photos ? `
-                                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    ${item.photos.map(photo => `
-                                        <div class="relative aspect-video overflow-hidden rounded-lg">
-                                            <img src="${photo}" alt="" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            ` : ''}
+            // 添加 Markdown 内容和照片展示
+            if (item.post) {
+                // 添加 Markdown 样式
+                detailContent.innerHTML = `
+                    <div class="mt-8 border-t-4 border-white pt-8 prose prose-invert prose-orange max-w-none">
+                        <div class="markdown-content">
+                            ${marked.parse(item.post)}
                         </div>
-                    `;
-                } else {
-                    detailContent.innerHTML = `
-                        <div class="text-red-400 text-center py-8">
-                            加载内容时出错
-                        </div>
-                    `;
-                }
+                    </div>
+                `;
             } else {
                 detailContent.innerHTML = `
-                    <div class="text-gray-400 text-center py-8">
-                        暂无详细内容
+                    <div class="mt-8 border-t-4 border-white pt-8">
+                        <div class="text-gray-400 text-center py-8">
+                            暂无详细内容
+                        </div>
                     </div>
                 `;
             }
