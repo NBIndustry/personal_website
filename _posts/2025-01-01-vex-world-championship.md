@@ -1,8 +1,9 @@
-# 🏆 VEX World Championship 2025
-
 ---
-
-## 🌟 竞赛概览
+layout: post
+title: "VEX World Championship 2025"
+date: 2025-01-01
+categories: competition
+---
 
 VEX 机器人世界锦标赛是全球规模最大的机器人竞赛，汇聚了来自世界各地的顶尖选手。我们团队有幸代表学校参加此次比赛，展现了出色的技术实力和团队协作能力。
 

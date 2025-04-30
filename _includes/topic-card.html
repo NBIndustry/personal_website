@@ -1,35 +1,45 @@
 {% if topic.web_url %}
-  <a href="{{ topic.web_url }}" class="github-component position-relative hover-grow height-full no-underline d-flex flex-column flex-justify-center text-center border border-gray-light rounded-1 bg-white p-5">
+  <!-- 如果主题有网址，创建一个链接卡片 -->
+  <a href="{{ topic.web_url }}" class="github-component position-relative hover-grow height-full no-underline d-flex flex-column flex-justify-center text-center border border-gray-light rounded-1 bg-transparent p-5">
     {% if topic.image_url %}
+      <!-- 如果主题有图片，显示图片 -->
       <img src="{{ topic.image_url }}" width="64" height="64" class="mx-auto rounded-1 mb-3" alt="{{ topic.name }}">
     {% else %}
+      <!-- 如果主题没有图片，显示一个带有 # 符号的占位符 -->
       <div
-        class="bg-blue-light f4 text-gray-light text-bold rounded-1 flex-shrink-0 text-center mx-auto mb-3"
-        style="width:64px; height:64px; line-height:64px;"
+        class="bg-transparent f4 text-white text-bold rounded-1 flex-shrink-0 text-center mx-auto mb-3"
+        style="width:64px; height:64px; line-height:64px; border: 1px solid rgba(255, 255, 255, 0.2);"
       >
         #
       </div>
     {% endif %}
-    <p class="f3 lh-condensed text-center link-gray-dark mb-0 mt-1">{{ topic.name }}</p>
+    <!-- 显示主题名称 -->
+    <p class="f3 lh-condensed text-center text-white mb-0 mt-1">{{ topic.name }}</p>
     {% if topic.description %}
-      <p class="f5 text-gray text-center mb-0 mt-1">{{ topic.description }}</p>
+      <!-- 如果主题有描述，显示描述 -->
+      <p class="f5 text-white text-center mb-0 mt-1">{{ topic.description }}</p>
     {% endif %}
   </a>
 {% else %}
-  <div class="github-component position-relative height-full text-center border border-gray-light rounded-1 bg-white p-5">
+  <!-- 如果主题没有网址，创建一个非链接卡片 -->
+  <div class="github-component position-relative height-full text-center border border-gray-light rounded-1 bg-transparent p-5">
     {% if topic.image_url %}
+      <!-- 如果主题有图片，显示图片 -->
       <img src="{{ topic.image_url }}" width="64" height="64" class="mx-auto rounded-1 mb-3" alt="{{ topic.name }}">
     {% else %}
+      <!-- 如果主题没有图片，显示一个带有 # 符号的占位符 -->
       <div
-        class="bg-blue-light f4 text-gray-light text-bold rounded-1 flex-shrink-0 text-center mx-auto mb-3"
-        style="width:64px; height:64px; line-height:64px;"
+        class="bg-transparent f4 text-white text-bold rounded-1 flex-shrink-0 text-center mx-auto mb-3"
+        style="width:64px; height:64px; line-height:64px; border: 1px solid rgba(255, 255, 255, 0.2);"
       >
         #
       </div>
     {% endif %}
-    <p class="f3 lh-condensed text-center mb-0 mt-1">{{ topic.name }}</p>
+    <!-- 显示主题名称 -->
+    <p class="f3 lh-condensed text-center text-white mb-0 mt-1">{{ topic.name }}</p>
     {% if topic.description %}
-      <p class="f5 text-gray text-center mb-0 mt-1">{{ topic.description }}</p>
+      <!-- 如果主题有描述，显示描述 -->
+      <p class="f5 text-white text-center mb-0 mt-1">{{ topic.description }}</p>
     {% endif %}
   </div>
 {% endif %}
