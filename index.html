@@ -1505,21 +1505,20 @@
                         { name: "Photography", weight: 5 },
                         { name: "NFT", weight: 4 },
                         { name: "AI", weight: 3 },
-                        { name: "Programming", weight: 4 },
+                        { name: "programming", weight: 4 },
                         { name: "Vinyl Records", weight: 2 },
                         { name: "Film Photography", weight: 2 },
                         { name: "Sports Card Collection", weight: 2 },
                         { name: "Basketball", weight: 2 },
-                        { name: "Gym", weight: 2 },
-                        { name: "Saxophone", weight: 2 },
+                        { name: "GYM", weight: 2 },
+                        { name: "saxophone", weight: 2 },
                         { name: "Robotics", weight: 2 },
-                        { name: "Boston Celtics", weight: 2 },
+                        { name: "painting", weight: 2 },
                         { name: "Customized Keyboard", weight: 2 },
                         { name: "Jazz", weight: 2 },
                         { name: "Pickle Pall", weight: 2 },
                         { name: "Clash Royale", weight: 2 },
                         { name: "NBA 2K", weight: 2 },
-                        { name: "Painting", weight: 2 },
                     ],
                     skills: [
                         {
@@ -1852,6 +1851,17 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                     description: "Focused on vinyl music and AI commentary content creation, accumulating over 300,000 plays.",
                     date: "2025-03-03"
                 }
+            ],
+            certificates: [
+                {
+                    name: "Participation in Conrad Aquanova",
+                    description: "",
+                    image: "images/ConradAquanova.jpg",
+                    date: "2024-01",
+                    organization: "Conrd Challenge China",
+                    tags: ["CAD", "environmental protection"]
+                }
+
             ]
         };
     </script>
@@ -1925,6 +1935,7 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                         <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="project">Project</button>
                         <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="competition">Competition</button>
                         <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="activity">Activity</button>
+                        <button class="flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-400 hover:text-gray-200" data-tab="certificate">Certificate</button>
                     </nav>
 
                     <div class="flex-1 overflow-y-auto pr-4">
@@ -1984,6 +1995,14 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                             <h2 class="text-2xl font-bold text-white mb-8">Activities</h2>
                             <div class="space-y-6" id="activity-cards">
                                 <!-- Activity cards will be added here -->
+                            </div>
+                        </section>
+
+                        <!-- Certificate Section -->
+                        <section id="certificate-section" class="tab-content hidden">
+                            <h2 class="text-2xl font-bold text-white mb-8">Certificates</h2>
+                            <div class="gallery-container">
+                                <!-- Certificate items will be added here -->
                             </div>
                         </section>
 
@@ -3201,7 +3220,8 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             if (item.post) {
                 // 添加 Markdown 样式
                 detailContent.innerHTML = `
-                    <div class="mt-8 border-t-4 border-white pt-8 prose prose-invert prose-orange max-w-none">
+                    <div class="mt-8 border-t-2 border-white pt-8 prose prose-invert prose-orange max-w-none">
+                      
                         <div class="markdown-content">
                             ${marked.parse(item.post)}
                         </div>
@@ -3209,9 +3229,9 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
                 `;
             } else {
                 detailContent.innerHTML = `
-                    <div class="mt-8 border-t-4 border-white pt-8">
+                    <div class="mt-8 border-t-2 border-white pt-8">
                         <div class="text-gray-400 text-center py-8">
-                            No detailed content available
+                            暂无详细内容
                         </div>
                     </div>
                 `;
@@ -3501,6 +3521,209 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
 
         projectSection.addEventListener('mouseleave', () => {
             autoplayInterval = setInterval(nextSlide, 5000);
+        });
+
+        // 渲染证书画廊
+        const certificateSection = document.querySelector('#certificate-section .gallery-container');
+        const certificateSlider = document.createElement('div');
+        certificateSlider.className = 'gallery-slider';
+        certificateSection.appendChild(certificateSlider);
+
+        // 添加证书导航按钮
+        const certificateNavigation = document.createElement('div');
+        certificateNavigation.className = 'gallery-navigation';
+        certificateNavigation.innerHTML = `
+            <button class="gallery-nav-button prev">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <button class="gallery-nav-button next">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        `;
+        certificateSection.appendChild(certificateNavigation);
+
+        // 添加证书指示点
+        const certificateDots = document.createElement('div');
+        certificateDots.className = 'gallery-dots';
+        certificateSection.appendChild(certificateDots);
+
+        let currentCertificateIndex = 0;
+        let certificateStartX = 0;
+        let isCertificateDragging = false;
+
+        // 渲染证书
+        profile.certificates.forEach((certificate, index) => {
+            const certificateElement = document.createElement('div');
+            certificateElement.className = 'gallery-item';
+            certificateElement.style.animationDelay = `${index * 0.2}s`;
+            
+            certificateElement.innerHTML = `
+                <img src="${certificate.image}" alt="${certificate.name}" class="gallery-image">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">${certificate.name}</h3>
+                    <p class="gallery-description">${certificate.description}</p>
+                    <div class="gallery-tags">
+                        ${certificate.tags.map(tag => `
+                            <span class="gallery-tag">${tag}</span>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            certificateElement.addEventListener('click', () => showDetail('certificate', certificate));
+            certificateSlider.appendChild(certificateElement);
+
+            // 添加指示点
+            const dot = document.createElement('div');
+            dot.className = `gallery-dot ${index === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => goToCertificateSlide(index));
+            certificateDots.appendChild(dot);
+        });
+
+        // 更新证书滑块位置
+        function updateCertificateSlider(animate = true) {
+            if (!animate) {
+                certificateSlider.classList.add('no-transition');
+            }
+            certificateSlider.style.transform = `translateX(-${currentCertificateIndex * 100}%)`;
+            // 更新指示点
+            document.querySelectorAll('#certificate-section .gallery-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentCertificateIndex);
+            });
+            if (!animate) {
+                certificateSlider.offsetHeight;
+                certificateSlider.classList.remove('no-transition');
+            }
+        }
+
+        // 切换到指定证书
+        function goToCertificateSlide(index) {
+            currentCertificateIndex = index;
+            updateCertificateSlider();
+        }
+
+        // 下一个证书
+        function nextCertificateSlide() {
+            if (currentCertificateIndex === profile.certificates.length - 1) {
+                currentCertificateIndex++;
+                updateCertificateSlider();
+                
+                setTimeout(() => {
+                    currentCertificateIndex = 0;
+                    updateCertificateSlider(false);
+                }, 500);
+            } else {
+                currentCertificateIndex = (currentCertificateIndex + 1) % profile.certificates.length;
+                updateCertificateSlider();
+            }
+        }
+
+        // 上一个证书
+        function prevCertificateSlide() {
+            if (currentCertificateIndex === 0) {
+                currentCertificateIndex = profile.certificates.length;
+                updateCertificateSlider(false);
+                
+                setTimeout(() => {
+                    currentCertificateIndex = profile.certificates.length - 1;
+                    updateCertificateSlider();
+                }, 50);
+            } else {
+                currentCertificateIndex = (currentCertificateIndex - 1 + profile.certificates.length) % profile.certificates.length;
+                updateCertificateSlider();
+            }
+        }
+
+        // 添加证书导航按钮事件监听
+        document.querySelector('#certificate-section .gallery-nav-button.prev').addEventListener('click', prevCertificateSlide);
+        document.querySelector('#certificate-section .gallery-nav-button.next').addEventListener('click', nextCertificateSlide);
+
+        // 添加证书触摸事件处理
+        certificateSlider.addEventListener('touchstart', (e) => {
+            certificateStartX = e.touches[0].clientX;
+            isCertificateDragging = true;
+        });
+
+        certificateSlider.addEventListener('touchmove', (e) => {
+            if (!isCertificateDragging) return;
+            const currentX = e.touches[0].clientX;
+            const diff = currentX - certificateStartX;
+            const percentage = (diff / certificateSection.offsetWidth) * 100;
+            certificateSlider.style.transform = `translateX(calc(-${currentCertificateIndex * 100}% + ${percentage}%))`;
+        });
+
+        certificateSlider.addEventListener('touchend', (e) => {
+            if (!isCertificateDragging) return;
+            isCertificateDragging = false;
+            const endX = e.changedTouches[0].clientX;
+            const diff = endX - certificateStartX;
+            
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    prevCertificateSlide();
+                } else {
+                    nextCertificateSlide();
+                }
+            } else {
+                updateCertificateSlider();
+            }
+        });
+
+        // 添加证书鼠标事件处理
+        certificateSlider.addEventListener('mousedown', (e) => {
+            certificateStartX = e.clientX;
+            isCertificateDragging = true;
+            certificateSlider.style.cursor = 'grabbing';
+        });
+
+        certificateSlider.addEventListener('mousemove', (e) => {
+            if (!isCertificateDragging) return;
+            const currentX = e.clientX;
+            const diff = currentX - certificateStartX;
+            const percentage = (diff / certificateSection.offsetWidth) * 100;
+            certificateSlider.style.transform = `translateX(calc(-${currentCertificateIndex * 100}% + ${percentage}%))`;
+        });
+
+        certificateSlider.addEventListener('mouseup', (e) => {
+            if (!isCertificateDragging) return;
+            isCertificateDragging = false;
+            certificateSlider.style.cursor = 'grab';
+            const endX = e.clientX;
+            const diff = endX - certificateStartX;
+            
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    prevCertificateSlide();
+                } else {
+                    nextCertificateSlide();
+                }
+            } else {
+                updateCertificateSlider();
+            }
+        });
+
+        certificateSlider.addEventListener('mouseleave', () => {
+            if (isCertificateDragging) {
+                isCertificateDragging = false;
+                certificateSlider.style.cursor = 'grab';
+                updateCertificateSlider();
+            }
+        });
+
+        // 证书自动播放
+        let certificateAutoplayInterval = setInterval(nextCertificateSlide, 5000);
+
+        // 鼠标悬停时暂停自动播放
+        certificateSection.addEventListener('mouseenter', () => {
+            clearInterval(certificateAutoplayInterval);
+        });
+
+        certificateSection.addEventListener('mouseleave', () => {
+            certificateAutoplayInterval = setInterval(nextCertificateSlide, 5000);
         });
     </script>
 </body>
