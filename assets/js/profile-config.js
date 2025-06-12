@@ -1,7 +1,7 @@
 // Personal Information Configuration
 const profile = {
     basics: {
-        name: "Kyrie Zhang",
+        name: "Kyrie Zhang111",
         titles: [
             "Computer Science Student",
             "Founder of Sette Studio",
