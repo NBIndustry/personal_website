@@ -1,7 +1,7 @@
 // Personal Information Configuration
 const profile = {
     basics: {
-        name: "Kyrie Zhang111",
+        name: "Kyrie Zhang",
         titles: [
             "Computer Science Student",
             "Founder of Sette Studio",
@@ -54,14 +54,14 @@ const profile = {
             degree: "Freshman-Sophomore",
             startDate: "2024-01",
             endDate: "2025-06",
-            description: ""
+            description: "Join Math Team and Model Bridge Team"
         },
         {
             school: "Hai Liang Middle School",
             degree: "",
             startDate: "2020-09",
             endDate: "2023-06",
-            description: ""
+            description: "Good School"
         },
         {
             school: "Wilbraham and Monson Academy",
@@ -276,7 +276,7 @@ The success of this competition is attributed to the effort and dedication of ev
             name: "CSP-J National First Prize",
             achievement: "Won the National First Prize in CSP-J",
             period: "Spring 2022",
-            description: "",
+            description: "The first time I won a national first prize in programming competition",
             date: "2022-10"
         },
         {
