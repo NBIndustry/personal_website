@@ -41,6 +41,14 @@ const profile = {
                     items: ["Python", "JavaScript", "C++"]
                 },
                 {
+                    category: "Robotics",
+                    items: ["CAD", "Coder", "Builder","Driver"]
+                },
+                {
+                    category: "Machine Learning",
+                    items: ["Python", "Linear Algebra", ]
+                },
+                {
                     category: "NFT and Blockchain",
                     items: ["Solidity", "Ethereum", "Polygon", "Binance Smart Chain"]
                 }
