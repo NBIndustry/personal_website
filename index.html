@@ -2433,8 +2433,24 @@
             }))
         ].filter(item => item.date);
 
+        // 改进的日期解析函数，处理各种日期格式
+        const parseDate = (dateStr) => {
+            if (!dateStr) return new Date(0);
+            const parts = dateStr.split('-');
+            if (parts.length === 1) {
+                // 只有年份，如 "2021"
+                return new Date(parseInt(parts[0]), 0, 1);
+            } else if (parts.length === 2) {
+                // 年份和月份，如 "2025-09"
+                return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, 1);
+            } else {
+                // 完整日期，如 "2025-10-02"
+                return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+            }
+        };
+
         // 按日期排序（从旧到新）
-        const sortedTimelineItems = timelineItems.sort((a, b) => new Date(a.date + 'T00:00:00Z') - new Date(b.date + 'T00:00:00Z'));
+        const sortedTimelineItems = timelineItems.sort((a, b) => parseDate(a.date) - parseDate(b.date));
         
         // 渲染时间线
         sortedTimelineItems.forEach((item) => {

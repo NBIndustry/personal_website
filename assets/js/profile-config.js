@@ -301,13 +301,21 @@ The success of this competition is attributed to the effort and dedication of ev
         {
             name: "IGEM Competition",
             achievement: "Gold Medal",
-            period: "2025-02-24 to 2025-10-32",
+            period: "2025-02-24 to 2025-10-02",
             description: "team leader",
-            date: "2025-10-32"
+            date: "2025-10-02"
         },
     ],
     activities: [
         {
+            name: "Fitness Training",
+            organization: "Sport",
+            period: "2023 to Present",
+            description: "Fitness training 4-5 times a week",
+            date: "2023-07-14"
+        },
+        {
+            
             name: "Sette Studio",
             organization: "Founder",
             period: "April 2025 to Present",
@@ -370,7 +378,15 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             period: "Ongoing",
             description: "Focused on vinyl music and AI commentary content creation, accumulating over 300,000 plays.",
             date: "2025-03-03"
-        }
+        },
+        {
+            name: "Math Tutoring at school",
+            organization: "Math Tutor",
+            period: "2025-09 to Present",
+            description: "Math tutoring for students in the school",
+            date: "2025-09"
+        },
+
     ],
     certificates: [
         {
