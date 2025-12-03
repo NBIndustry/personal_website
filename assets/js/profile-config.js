@@ -285,7 +285,14 @@ The success of this competition is attributed to the effort and dedication of ev
             period: "January 2025-March 2025",
             description: "",
             date: "2025-05"
-        }
+        },
+        {
+            name: "IGEM Competition",
+            achievement: "Gold Medal",
+            period: "2025-02-24 to 2025-10-32",
+            description: "team leader",
+            date: "2025-10-32"
+        },
     ],
     activities: [
         {
