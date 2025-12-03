@@ -179,9 +179,9 @@ https://drive.google.com/file/d/1J6QGgzGMsBtyaCdDnPJ11-FB92rhqZcv/view?usp=shari
     competitions: [
         {
             name: "VEX World Championship",
-            achievement: "",
+            achievement: "First place in the qualifying group",
             period: "2025",
-            description: "",
+            description: "coder",
             date: "2025-05",
             post: `# VEX World Championship 2025
 
@@ -350,6 +350,13 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             period: "April 2025 to Present",
             description: "FRAME! Photography Contest Organizer",
             date: "2025-04"
+        },
+        {
+            name: "School Band",
+            organization: "",
+            period: "September 2025 to Present",
+            description: "Saxphone player in the school band",
+            date: "2025-09"
         },
         {
             name: "Netease Cloud Music Creator",
