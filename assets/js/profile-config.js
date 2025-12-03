@@ -69,7 +69,7 @@ const profile = {
             degree: "",
             startDate: "2020-09",
             endDate: "2023-06",
-            description: "Good School"
+            description: " A private middel school in China, "
         },
         {
             school: "Wilbraham and Monson Academy",
