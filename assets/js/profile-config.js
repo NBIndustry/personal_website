@@ -174,7 +174,19 @@ Belonging is a short film about a story of how a new international student find 
 ## Project Showcase
 ![Belonging3](images/Belonging3.jpg)
 https://drive.google.com/file/d/1J6QGgzGMsBtyaCdDnPJ11-FB92rhqZcv/view?usp=sharing`
-        }
+        },
+        {
+            name: "FRAME！Photography Contest",
+            description: "FRAME! Photography Contest Organizer",
+            image: "images/FRAME!.jpg",
+            photos: [
+                "images/FRAME!.jpg",
+            ],
+            tags: ["photography", "contest"], 
+            period: "April 2025 to Present",
+            role: "Main founder and coder",
+            date: "2025-04"
+        },
     ],
     competitions: [
         {
@@ -344,13 +356,7 @@ We will continue to explore the unlimited possibilities of AI art and provide hi
             description: "Developing an AI-based to-do list application, currently in the development stage.",
             date: "2024-10"
         },
-        {
-            name: "FRAME！Photography Contest",
-            organization: "Builder",
-            period: "April 2025 to Present",
-            description: "FRAME! Photography Contest Organizer",
-            date: "2025-04"
-        },
+        
         {
             name: "School Band",
             organization: "",
