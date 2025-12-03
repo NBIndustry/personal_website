@@ -73,10 +73,10 @@ const profile = {
     ],
     summerPrograms: [
         {
-            name: "Columbia University AI and Blockchain Pre-College Program",
+            name: "Columbia University MML and Data Science Pre-College Program",
             organization: "Columbia University",
-            period: "Expected Summer 2025",
-            description: "Will participate in Columbia University's blockchain pre-college program, focusing on in-depth learning of blockchain technology and applications.",
+            period: "Summer 2025",
+            description: "participated in Columbia University's MML and Data Science Pre-College Program, focusing on in-depth learning of MML and Data Science.",
             date: "2025-07"
         },
         {
